@@ -1,0 +1,55 @@
+### Add train
+POST http://localhost:8080/train/add
+Content-Type: application/json
+
+{
+  "name": "1",
+  "number": "1",
+  "arrivalCity": "1",
+  "departureCity": "1",
+  "arrivalTime": "2023-03-30T22:16:58.588Z",
+  "departureTime": "2023-03-30T22:16:58.588Z"
+}
+
+
+### Add train
+POST http://localhost:8080/train/add
+Content-Type: application/json
+
+{
+  "name": "2",
+  "number": "2",
+  "arrivalCity": "2",
+  "departureCity": "2",
+  "arrivalTime": "2023-03-30T22:16:58.588Z",
+  "departureTime": "2023-03-30T22:16:58.588Z"
+}
+
+
+### Add express train
+POST http://localhost:8080/train-express/add
+Content-Type: application/json
+
+{
+  "name": "1",
+  "number": "1",
+  "arrivalCity": "1",
+  "departureCity": "1",
+  "arrivalTime": "2023-03-30T22:16:58.588Z",
+  "departureTime": "2023-03-30T22:16:58.588Z"
+}
+
+
+### Add express train
+POST http://localhost:8080/train-express/add
+Content-Type: application/json
+
+{
+  "name": "2",
+  "number": "2",
+  "arrivalCity": "2",
+  "departureCity": "2",
+  "arrivalTime": "2023-03-30T22:16:58.588Z",
+  "departureTime": "2023-03-30T22:16:58.588Z"
+}
+

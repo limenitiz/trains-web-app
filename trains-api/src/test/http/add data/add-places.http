@@ -1,0 +1,82 @@
+### Add place
+POST http://localhost:8080/place/insert/train/1
+Content-Type: application/json
+
+{
+  "number": 1,
+  "placeClass": "ClassA"
+}
+
+
+### Add place
+POST http://localhost:8080/place/insert/train/1
+Content-Type: application/json
+
+{
+  "number": 2,
+  "placeClass": "ClassA"
+}
+
+
+### Add place
+POST http://localhost:8080/place/insert/train/1
+Content-Type: application/json
+
+{
+  "number": 3,
+  "placeClass": "ClassB"
+}
+
+
+### Add place
+POST http://localhost:8080/place/insert/train/1
+Content-Type: application/json
+
+{
+  "number": 4,
+  "placeClass": "ClassB"
+}
+
+
+### Add place
+POST http://localhost:8080/place/insert/train-express/1
+Content-Type: application/json
+
+{
+  "number": 1,
+  "placeClass": "ClassA"
+}
+
+
+### Add place
+POST http://localhost:8080/place/insert/train-express/1
+Content-Type: application/json
+
+{
+  "number": 2,
+  "placeClass": "ClassA"
+}
+
+
+### Add place
+POST http://localhost:8080/place/insert/train-express/1
+Content-Type: application/json
+
+{
+  "number": 3,
+  "placeClass": "ClassB"
+}
+
+
+### Add place
+POST http://localhost:8080/place/insert/train-express/1
+Content-Type: application/json
+
+{
+  "number": 4,
+  "placeClass": "ClassB"
+}
+
+
+
+

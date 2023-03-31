@@ -1,0 +1,65 @@
+### Add passenger
+POST http://localhost:8080/passenger/insert/place/1
+Content-Type: application/json
+
+{
+  "firstName": "1",
+  "secondName": "1",
+  "gender": "Male"
+}
+
+
+### Add passenger
+POST http://localhost:8080/passenger/insert/place/2
+Content-Type: application/json
+
+{
+  "firstName": "2",
+  "secondName": "2",
+  "gender": "Female"
+}
+
+
+### Add passenger
+POST http://localhost:8080/passenger/insert/place/3
+Content-Type: application/json
+
+{
+  "firstName": "3",
+  "secondName": "3",
+  "gender": "Male"
+}
+
+
+### Add passenger
+POST http://localhost:8080/passenger/insert/place/5
+Content-Type: application/json
+
+{
+  "firstName": "5",
+  "secondName": "5",
+  "gender": "Male"
+}
+
+
+### Add passenger
+POST http://localhost:8080/passenger/insert/place/6
+Content-Type: application/json
+
+{
+  "firstName": "6",
+  "secondName": "6",
+  "gender": "Female"
+}
+
+
+### Add passenger
+POST http://localhost:8080/passenger/insert/place/7
+Content-Type: application/json
+
+{
+  "firstName": "7",
+  "secondName": "7",
+  "gender": "Male"
+}
+
