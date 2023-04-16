@@ -5,7 +5,7 @@
 
 	<groupId>limenitiz.study</groupId>
 	<artifactId>java-innopolis-course</artifactId>
-	<version>3.1.6-SNAPSHOT</version>
+	<version>0.0.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
 
 	<modules>
@@ -33,6 +33,7 @@
 
 	<dependencyManagement>
 		<dependencies>
+			<!-- Springframework -->
 			<dependency>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-dependencies</artifactId>
