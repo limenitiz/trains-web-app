@@ -1,15 +1,13 @@
 package limenitiz.study.restapi.entity;
 
 import limenitiz.study.restapi.model.TrainExpress;
-import limenitiz.study.templates.InvalidOperationException;
-import limenitiz.study.templates.TemplateEntity;
+import limenitiz.study.templates.IEntity;
 import lombok.*;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
 import java.util.Collection;
 import java.util.LinkedList;
-import java.util.List;
 
 @Builder
 @Getter @Setter
@@ -17,7 +15,7 @@ import java.util.List;
 @AllArgsConstructor
 @Entity(name = "train_express")
 public class TrainExpressEntity
-        implements TemplateEntity<TrainExpress> {
+        implements IEntity<TrainExpress> {
 
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -46,12 +44,5 @@ public class TrainExpressEntity
                                 .map(PlaceEntity::toDto)
                                 .toList())
         );
-    }
-
-    @Override
-    public <ParentEntity extends TemplateEntity<?>>
-    void insertParent(ParentEntity parentEntity)
-            throws InvalidOperationException {
-        throw new InvalidOperationException("");
     }
 }

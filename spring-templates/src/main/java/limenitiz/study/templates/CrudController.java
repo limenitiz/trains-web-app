@@ -1,6 +1,7 @@
 package limenitiz.study.templates;
 
 import io.swagger.v3.oas.annotations.Operation;
+import limenitiz.study.templates.exceptions.NotFoundException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
@@ -9,14 +10,14 @@ import org.springframework.http.ResponseEntity;
 import java.util.List;
 
 
-public abstract class TemplateController
-        <Service extends TemplateService<?, Dto, Entity>,
-                Dto extends TemplateDto<Entity>,
-                Entity extends TemplateEntity<Dto>> {
+public abstract class CrudController
+        <Service extends CrudService<?, Dto, Entity>,
+                Dto extends IDto<Entity>,
+                Entity extends IEntity<Dto>> {
 
     protected final Service service;
 
-    public TemplateController(Service service) {
+    public CrudController(Service service) {
         this.service = service;
     }
 

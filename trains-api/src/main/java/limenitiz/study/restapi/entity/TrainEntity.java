@@ -1,8 +1,7 @@
 package limenitiz.study.restapi.entity;
 
 
-import limenitiz.study.templates.InvalidOperationException;
-import limenitiz.study.templates.TemplateEntity;
+import limenitiz.study.templates.IEntity;
 import limenitiz.study.restapi.model.Train;
 import javax.persistence.*;
 import lombok.*;
@@ -17,7 +16,7 @@ import java.util.List;
 @AllArgsConstructor
 @Entity(name = "train")
 public class TrainEntity
-        implements TemplateEntity<Train> {
+        implements IEntity<Train> {
 
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -47,13 +46,5 @@ public class TrainEntity
                         .toList())
         );
     }
-
-    @Override
-    public <ParentEntity extends TemplateEntity<?>>
-    void insertParent(ParentEntity parentEntity)
-            throws InvalidOperationException {
-        throw new InvalidOperationException("");
-    }
-
 }
 

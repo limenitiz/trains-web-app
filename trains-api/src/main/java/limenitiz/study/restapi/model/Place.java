@@ -1,7 +1,7 @@
 package limenitiz.study.restapi.model;
 
 import limenitiz.study.restapi.entity.PassengerEntity;
-import limenitiz.study.templates.TemplateDto;
+import limenitiz.study.templates.IDto;
 import limenitiz.study.restapi.entity.PlaceEntity;
 import lombok.*;
 
@@ -10,7 +10,7 @@ import lombok.*;
 @Getter @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class Place implements TemplateDto<PlaceEntity> {
+public class Place implements IDto<PlaceEntity> {
     private Long id;
     private Integer number;
     private PlaceClass placeClass;

@@ -1,7 +1,7 @@
 package limenitiz.study.restapi.model;
 
 import limenitiz.study.restapi.entity.TrainExpressEntity;
-import limenitiz.study.templates.TemplateDto;
+import limenitiz.study.templates.IDto;
 import lombok.*;
 
 import java.time.LocalDateTime;
@@ -13,7 +13,7 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 public class TrainExpress
-        implements TemplateDto<TrainExpressEntity> {
+        implements IDto<TrainExpressEntity> {
     private Long id;
     private String name;
     private String number;

@@ -1,4 +1,4 @@
-package limenitiz.study.templates;
+package limenitiz.study.templates.exceptions;
 
 public class InvalidOperationException extends Exception {
     public InvalidOperationException(String message) {

@@ -1,6 +1,6 @@
 package limenitiz.study.restapi.model;
 
-import limenitiz.study.templates.TemplateDto;
+import limenitiz.study.templates.IDto;
 import limenitiz.study.restapi.entity.PassengerEntity;
 import lombok.*;
 
@@ -8,7 +8,7 @@ import lombok.*;
 @Getter @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class Passenger implements TemplateDto<PassengerEntity> {
+public class Passenger implements IDto<PassengerEntity> {
     private Long id;
     private String firstName;
     private String secondName;

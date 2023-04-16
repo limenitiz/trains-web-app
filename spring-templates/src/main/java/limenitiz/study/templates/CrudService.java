@@ -1,5 +1,6 @@
 package limenitiz.study.templates;
 
+import limenitiz.study.templates.exceptions.NotFoundException;
 import lombok.Getter;
 import org.springframework.data.domain.Example;
 import org.springframework.data.repository.query.FluentQuery;
@@ -7,13 +8,13 @@ import org.springframework.data.repository.query.FluentQuery;
 import javax.transaction.Transactional;
 import java.util.List;
 
-public abstract class TemplateService
-        <Repository extends TemplateRepository<Entity>,
-                Dto extends TemplateDto<Entity>,
-                Entity extends TemplateEntity<Dto>> {
+public abstract class CrudService
+        <Repository extends CrudRepository<Entity>,
+                Dto extends IDto<Entity>,
+                Entity extends IEntity<Dto>> {
     @Getter protected Repository repository;
 
-    public TemplateService(Repository repository) {
+    public CrudService(Repository repository) {
         this.repository = repository;
     }
 
@@ -24,9 +25,7 @@ public abstract class TemplateService
 
     @Transactional
     public void removeById(Long id) {
-//        repository.deleteById(id);
-        var entity = repository.findById(id);
-        entity.ifPresent((e) -> repository.delete(e));
+        repository.deleteById(id);
     }
 
     @Transactional
@@ -53,7 +52,7 @@ public abstract class TemplateService
                 FluentQuery.FetchableFluentQuery::all);
 
         return entities.stream()
-                .map(TemplateEntity::toDto)
+                .map(IEntity::toDto)
                 .toList();
     }
 }

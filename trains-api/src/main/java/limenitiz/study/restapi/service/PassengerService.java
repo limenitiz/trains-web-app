@@ -6,12 +6,12 @@ import limenitiz.study.restapi.model.Passenger;
 import limenitiz.study.restapi.model.Place;
 import limenitiz.study.restapi.repository.PassengerRepository;
 import limenitiz.study.restapi.repository.PlaceRepository;
-import limenitiz.study.templates.child.TemplateChildService;
+import limenitiz.study.templates.CrudService;
 import org.springframework.stereotype.Service;
 
 @Service
 public class PassengerService
-        extends TemplateChildService<PassengerRepository, Passenger, PassengerEntity> {
+        extends CrudService<PassengerRepository, Passenger, PassengerEntity> {
     public PassengerService(PassengerRepository passengerRepository) {
         super(passengerRepository);
     }

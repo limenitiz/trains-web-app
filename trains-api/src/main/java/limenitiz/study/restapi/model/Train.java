@@ -1,18 +1,15 @@
 package limenitiz.study.restapi.model;
 
 
-import limenitiz.study.templates.TemplateDto;
+import limenitiz.study.templates.IDto;
 import limenitiz.study.restapi.entity.TrainEntity;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
 
 import java.time.LocalDateTime;
-import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
-import java.util.Optional;
-import java.util.stream.Stream;
 
 import lombok.*;
 
@@ -21,7 +18,7 @@ import lombok.*;
 @Getter @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class Train implements TemplateDto<TrainEntity> {
+public class Train implements IDto<TrainEntity> {
     private Long id;
     private String name;
     private String number;

@@ -1,8 +1,6 @@
 package limenitiz.study.templates;
 
-import java.util.List;
-
-public interface TemplateDto <Entity extends TemplateEntity<?>> {
+public interface IDto<Entity extends IEntity<?>> {
 
     default Entity toEntity(Long id) {
         var entity = toEntity();
@@ -16,8 +14,8 @@ public interface TemplateDto <Entity extends TemplateEntity<?>> {
      * if dto not null: convert dto to entity
      * else: return null
      */
-    default <InnerEntity extends TemplateEntity<?>>
-    InnerEntity toEntity(TemplateDto<InnerEntity> dto) {
+    default <InnerEntity extends IEntity<?>>
+    InnerEntity toEntity(IDto<InnerEntity> dto) {
         InnerEntity entity = null;
         if (dto != null) {
             entity = dto.toEntity();

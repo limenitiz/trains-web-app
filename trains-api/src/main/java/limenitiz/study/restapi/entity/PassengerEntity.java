@@ -2,9 +2,8 @@ package limenitiz.study.restapi.entity;
 
 import limenitiz.study.restapi.model.Passenger;
 import limenitiz.study.restapi.model.PassengerGender;
-import limenitiz.study.templates.InvalidOperationException;
 import lombok.*;
-import limenitiz.study.templates.TemplateEntity;
+import limenitiz.study.templates.IEntity;
 
 import javax.persistence.*;
 
@@ -14,7 +13,7 @@ import javax.persistence.*;
 @AllArgsConstructor
 @Entity(name = "passenger")
 public class PassengerEntity
-        implements TemplateEntity<Passenger> {
+        implements IEntity<Passenger> {
 
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -34,18 +33,6 @@ public class PassengerEntity
                 this.secondName,
                 this.gender
         );
-    }
-
-    @Override
-    public <ParentEntity extends TemplateEntity<?>>
-    void insertParent(ParentEntity parentEntity)
-            throws InvalidOperationException {
-        if (parentEntity instanceof PlaceEntity) {
-            place = (PlaceEntity) parentEntity;
-        } else {
-            throw new InvalidOperationException("Error: Unknown type. " +
-                    "Impossible insert object into Passenger.");
-        }
     }
 }
 
