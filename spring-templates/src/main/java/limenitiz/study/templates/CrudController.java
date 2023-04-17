@@ -1,7 +1,7 @@
 package limenitiz.study.templates;
 
 import io.swagger.v3.oas.annotations.Operation;
-import limenitiz.study.templates.exceptions.NotFoundException;
+import limenitiz.study.templates.exception.NotFoundException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
@@ -21,7 +21,7 @@ public abstract class CrudController
         this.service = service;
     }
 
-    @PostMapping("/add")
+    @PostMapping("/")
     @Operation(summary = "Add element")
     public ResponseEntity<Void> addElement(@RequestBody Dto dto) {
         service.add(dto);
@@ -31,7 +31,7 @@ public abstract class CrudController
                 .build();
     }
 
-    @GetMapping("/get/all")
+    @GetMapping("/")
     @Operation(summary = "Get a list of all elements")
     public ResponseEntity<List<Dto>> getAllElements() {
         return ResponseEntity
@@ -49,29 +49,20 @@ public abstract class CrudController
                 .body(service.findByDto(dto));
     }
 
-    @GetMapping("/get/{id}")
+    @GetMapping("/{id}")
     @Operation(summary = "Get element by id")
-    public ResponseEntity<?> getElementById(@PathVariable Long id) {
-        try {
-            return ResponseEntity
-                    .status(HttpStatus.OK)
-                    .contentType(MediaType.APPLICATION_JSON)
-                    .body(service.getById(id));
-        } catch (NotFoundException e) {
-            return ResponseEntity
-                    .status(HttpStatus.NOT_FOUND)
-                    .contentType(MediaType.APPLICATION_JSON)
-                    .body("{ \"error\": \"" + e.getMessage() + "\" }"
-                    );
-        }
+    public ResponseEntity<?> getElementById(@PathVariable Long id) throws NotFoundException {
+        return ResponseEntity
+                .status(HttpStatus.OK)
+                .contentType(MediaType.APPLICATION_JSON)
+                .body(service.findById(id));
+
     }
 
-    @PutMapping("/update/{id}")
+    @PutMapping("/{id}")
     @Operation(summary = "Edit element by id")
-    public ResponseEntity<Void> updateElement(
-            @PathVariable Long id,
-            @RequestBody Dto dto) {
-
+    public ResponseEntity<Void> updateElement(@PathVariable Long id,
+                                              @RequestBody Dto dto) throws NotFoundException {
         service.updateById(id, dto);
         return ResponseEntity
                 .status(HttpStatus.OK)
@@ -79,9 +70,9 @@ public abstract class CrudController
                 .build();
     }
 
-    @DeleteMapping("/delete/{id}")
+    @DeleteMapping("/{id}")
     @Operation(summary = "Delete element by id")
-    public ResponseEntity<Void> deleteElementById(@PathVariable Long id) {
+    public ResponseEntity<Void> deleteElementById(@PathVariable Long id) throws NotFoundException {
         service.removeById(id);
         return ResponseEntity
                 .status(HttpStatus.OK)

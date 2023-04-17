@@ -28,7 +28,7 @@ public class TrainEntity
     private LocalDateTime departureTime;
 
     @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL, mappedBy = "train")
-    private List<PlaceEntity> places;
+    private final List<PlaceEntity> places = new LinkedList<>();
 
     @Override
     public Train toDto() {
@@ -41,9 +41,9 @@ public class TrainEntity
                 arrivalTime,
                 departureTime,
                 new LinkedList<>(
-                places.stream()
-                        .map(PlaceEntity::toDto)
-                        .toList())
+                        places.stream()
+                                .map(PlaceEntity::toDto)
+                                .toList())
         );
     }
 }

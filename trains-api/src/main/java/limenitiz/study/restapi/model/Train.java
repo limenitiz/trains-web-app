@@ -30,17 +30,22 @@ public class Train implements IDto<TrainEntity> {
 
     @Override
     public TrainEntity toEntity() {
-        return TrainEntity.builder()
-                .name(name)
-                .number(number)
-                .arrivalCity(arrivalCity)
-                .departureCity(departureCity)
-                .arrivalTime(arrivalTime)
-                .departureTime(departureTime)
-                .places(places.stream()
-                        .map(Place::toEntity)
-                        .toList())
-                .build();
+        var e = new TrainEntity(
+                null,
+                name,
+                number,
+                arrivalCity,
+                departureCity,
+                arrivalTime,
+                departureTime
+        );
+
+        e.getPlaces().addAll(places.stream()
+                .map(Place::toEntity)
+                .toList()
+        );
+
+        return e;
     }
 }
 

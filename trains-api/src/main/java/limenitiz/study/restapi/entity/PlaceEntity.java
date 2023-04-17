@@ -22,7 +22,7 @@ public class PlaceEntity
     @Enumerated(EnumType.STRING)
     private PlaceClass placeClass;
 
-    @OneToOne(mappedBy = "place")
+    @ManyToOne
     private PassengerEntity passenger;
 
     @ManyToOne

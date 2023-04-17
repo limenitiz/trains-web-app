@@ -1,6 +1,6 @@
 package limenitiz.study.templates;
 
-import limenitiz.study.templates.exceptions.NotFoundException;
+import limenitiz.study.templates.exception.NotFoundException;
 import lombok.Getter;
 import org.springframework.data.domain.Example;
 import org.springframework.data.repository.query.FluentQuery;
@@ -24,17 +24,17 @@ public abstract class CrudService
     }
 
     @Transactional
-    public void removeById(Long id) {
+    public void removeById(Long id) throws NotFoundException {
         repository.deleteById(id);
     }
 
     @Transactional
-    public void updateById(Long id, Dto dto) {
+    public void updateById(Long id, Dto dto) throws NotFoundException {
         Entity entity = dto.toEntity(id);
         repository.save(entity);
     }
 
-    public Dto getById(Long id) throws NotFoundException {
+    public Dto findById(Long id) throws NotFoundException {
         return repository
                 .findById(id)
                 .orElseThrow(() -> new NotFoundException("Element not found"))

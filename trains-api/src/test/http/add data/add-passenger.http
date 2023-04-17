@@ -8,6 +8,12 @@ Content-Type: application/json
   "gender": "Male"
 }
 
+> {%
+    client.test("Request executed successfully", function() {
+        client.assert(response.status === 200, "Response status is not 200");
+    });
+%}
+
 
 ### Add passenger
 POST http://localhost:8080/passenger/insert/place/2
@@ -18,6 +24,12 @@ Content-Type: application/json
   "secondName": "2",
   "gender": "Female"
 }
+
+> {%
+    client.test("Request executed successfully", function() {
+        client.assert(response.status === 200, "Response status is not 200");
+    });
+%}
 
 
 ### Add passenger
@@ -30,9 +42,32 @@ Content-Type: application/json
   "gender": "Male"
 }
 
+> {%
+    client.test("Request executed successfully", function() {
+        client.assert(response.status === 200, "Response status is not 200");
+    });
+%}
+
 
 ### Add passenger
-POST http://localhost:8080/passenger/insert/place/5
+POST http://localhost:8080/passenger/insert/place/4
+Content-Type: application/json
+
+{
+  "firstName": "4",
+  "secondName": "4",
+  "gender": "Male"
+}
+
+> {%
+    client.test("Request executed successfully", function() {
+        client.assert(response.status === 200, "Response status is not 200");
+    });
+%}
+
+
+### Add passenger
+POST http://localhost:8080/passenger/
 Content-Type: application/json
 
 {
@@ -41,16 +76,31 @@ Content-Type: application/json
   "gender": "Male"
 }
 
+> {%
+    client.test("Request executed successfully", function() {
+        client.assert(response.status === 200, "Response status is not 200");
+    });
+%}
 
-### Add passenger
-POST http://localhost:8080/passenger/insert/place/6
-Content-Type: application/json
 
-{
-  "firstName": "6",
-  "secondName": "6",
-  "gender": "Female"
-}
+### Add place for passenger
+POST http://localhost:8080/passenger/5/place/5
+
+> {%
+    client.test("Request executed successfully", function() {
+        client.assert(response.status === 200, "Response status is not 200");
+    });
+%}
+
+
+### Add place for passenger
+POST http://localhost:8080/passenger/5/place/6
+
+> {%
+    client.test("Request executed successfully", function() {
+        client.assert(response.status === 200, "Response status is not 200");
+    });
+%}
 
 
 ### Add passenger
@@ -58,8 +108,31 @@ POST http://localhost:8080/passenger/insert/place/7
 Content-Type: application/json
 
 {
-  "firstName": "7",
-  "secondName": "7",
+  "firstName": "6",
+  "secondName": "6",
   "gender": "Male"
 }
+
+> {%
+    client.test("Request executed successfully", function() {
+        client.assert(response.status === 200, "Response status is not 200");
+    });
+%}
+
+
+### Add passenger
+POST http://localhost:8080/passenger/insert/place/8
+Content-Type: application/json
+
+{
+  "firstName": "7",
+  "secondName": "7",
+  "gender": "Female"
+}
+
+> {%
+    client.test("Request executed successfully", function() {
+        client.assert(response.status === 200, "Response status is not 200");
+    });
+%}
 

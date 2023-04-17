@@ -1,11 +1,14 @@
 package limenitiz.study.restapi.entity;
 
+
 import limenitiz.study.restapi.model.Passenger;
 import limenitiz.study.restapi.model.PassengerGender;
 import lombok.*;
 import limenitiz.study.templates.IEntity;
 
 import javax.persistence.*;
+import java.util.LinkedList;
+import java.util.List;
 
 @Builder
 @Getter @Setter
@@ -22,8 +25,8 @@ public class PassengerEntity
     @Enumerated(EnumType.STRING)
     private PassengerGender gender;
 
-    @OneToOne
-    private PlaceEntity place;
+    @OneToMany(mappedBy = "passenger")
+    private final List<PlaceEntity> places = new LinkedList<>();
 
     @Override
     public Passenger toDto() {

@@ -1,5 +1,6 @@
 package limenitiz.study.restapi.entity;
 
+
 import limenitiz.study.restapi.model.TrainExpress;
 import limenitiz.study.templates.IEntity;
 import lombok.*;
@@ -8,6 +9,7 @@ import javax.persistence.*;
 import java.time.LocalDateTime;
 import java.util.Collection;
 import java.util.LinkedList;
+import java.util.List;
 
 @Builder
 @Getter @Setter
@@ -27,7 +29,7 @@ public class TrainExpressEntity
     private LocalDateTime departureTime;
 
     @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL, mappedBy = "trainExpress")
-    private Collection<PlaceEntity> places;
+    private final List<PlaceEntity> places = new LinkedList<>();
 
     @Override
     public TrainExpress toDto() {

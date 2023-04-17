@@ -1,4 +1,4 @@
-package limenitiz.study.templates.exceptions;
+package limenitiz.study.templates.exception;
 
 public class NotFoundException extends Exception {
     public NotFoundException(String message) {

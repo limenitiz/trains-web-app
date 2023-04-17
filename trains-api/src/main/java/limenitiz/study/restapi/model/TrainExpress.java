@@ -1,5 +1,6 @@
 package limenitiz.study.restapi.model;
 
+import limenitiz.study.restapi.entity.TrainEntity;
 import limenitiz.study.restapi.entity.TrainExpressEntity;
 import limenitiz.study.templates.IDto;
 import lombok.*;
@@ -25,16 +26,21 @@ public class TrainExpress
 
     @Override
     public TrainExpressEntity toEntity() {
-        return TrainExpressEntity.builder()
-                .name(name)
-                .number(number)
-                .arrivalCity(arrivalCity)
-                .departureCity(departureCity)
-                .arrivalTime(arrivalTime)
-                .departureTime(departureTime)
-                .places(places.stream()
-                        .map(Place::toEntity)
-                        .toList())
-                .build();
+        var e = new TrainExpressEntity(
+                null,
+                name,
+                number,
+                arrivalCity,
+                departureCity,
+                arrivalTime,
+                departureTime
+        );
+
+        e.getPlaces().addAll(places.stream()
+                .map(Place::toEntity)
+                .toList()
+        );
+
+        return e;
     }
 }
