@@ -1,0 +1,7216 @@
+### Add place
+POST http://localhost:8080/api/place/insert/train/1
+Content-Type: application/json
+
+{
+  "number": 0,
+  "placeClass": "ReservedSeat",
+  "price": 1673.1171740564869
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/1
+Content-Type: application/json
+
+{
+  "number": 1,
+  "placeClass": "ReservedSeat",
+  "price": 2127.449404888407
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/1
+Content-Type: application/json
+
+{
+  "number": 2,
+  "placeClass": "ReservedSeat",
+  "price": 1928.4363170194733
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/1
+Content-Type: application/json
+
+{
+  "number": 3,
+  "placeClass": "Compartment",
+  "price": 275.68001654727004
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/1
+Content-Type: application/json
+
+{
+  "number": 4,
+  "placeClass": "Compartment",
+  "price": 498.68902159015175
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/1
+Content-Type: application/json
+
+{
+  "number": 5,
+  "placeClass": "ReservedSeat",
+  "price": 1733.8920782849023
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/1
+Content-Type: application/json
+
+{
+  "number": 6,
+  "placeClass": "ReservedSeat",
+  "price": 1662.3098544415834
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/1
+Content-Type: application/json
+
+{
+  "number": 7,
+  "placeClass": "ReservedSeat",
+  "price": 1134.8212343812688
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/1
+Content-Type: application/json
+
+{
+  "number": 8,
+  "placeClass": "Compartment",
+  "price": 297.66010713009354
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/1
+Content-Type: application/json
+
+{
+  "number": 9,
+  "placeClass": "ReservedSeat",
+  "price": 1661.418213427221
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/1
+Content-Type: application/json
+
+{
+  "number": 10,
+  "placeClass": "Compartment",
+  "price": 464.2995277410376
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/1
+Content-Type: application/json
+
+{
+  "number": 11,
+  "placeClass": "ReservedSeat",
+  "price": 2221.584716599148
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/1
+Content-Type: application/json
+
+{
+  "number": 12,
+  "placeClass": "ReservedSeat",
+  "price": 3927.217463338366
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/1
+Content-Type: application/json
+
+{
+  "number": 13,
+  "placeClass": "Compartment",
+  "price": 390.59191269893375
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/1
+Content-Type: application/json
+
+{
+  "number": 14,
+  "placeClass": "Compartment",
+  "price": 401.4136937840225
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/1
+Content-Type: application/json
+
+{
+  "number": 15,
+  "placeClass": "ReservedSeat",
+  "price": 1872.9617796499288
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/1
+Content-Type: application/json
+
+{
+  "number": 16,
+  "placeClass": "ReservedSeat",
+  "price": 1433.2436801631286
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/1
+Content-Type: application/json
+
+{
+  "number": 17,
+  "placeClass": "ReservedSeat",
+  "price": 2893.669260993008
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/1
+Content-Type: application/json
+
+{
+  "number": 18,
+  "placeClass": "Compartment",
+  "price": 114.70774268883228
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/1
+Content-Type: application/json
+
+{
+  "number": 19,
+  "placeClass": "Compartment",
+  "price": 316.9009381602756
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/1
+Content-Type: application/json
+
+{
+  "number": 20,
+  "placeClass": "ReservedSeat",
+  "price": 1582.5166222315202
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/1
+Content-Type: application/json
+
+{
+  "number": 21,
+  "placeClass": "Compartment",
+  "price": 452.2849809240362
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/1
+Content-Type: application/json
+
+{
+  "number": 22,
+  "placeClass": "ReservedSeat",
+  "price": 2185.615205189667
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/1
+Content-Type: application/json
+
+{
+  "number": 23,
+  "placeClass": "ReservedSeat",
+  "price": 1185.5954384679285
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/1
+Content-Type: application/json
+
+{
+  "number": 24,
+  "placeClass": "Compartment",
+  "price": 100.64571857404098
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/2
+Content-Type: application/json
+
+{
+  "number": 0,
+  "placeClass": "Compartment",
+  "price": 388.0404671253257
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/2
+Content-Type: application/json
+
+{
+  "number": 1,
+  "placeClass": "Compartment",
+  "price": 330.83260160212365
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/2
+Content-Type: application/json
+
+{
+  "number": 2,
+  "placeClass": "ReservedSeat",
+  "price": 2484.090361736956
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/2
+Content-Type: application/json
+
+{
+  "number": 3,
+  "placeClass": "ReservedSeat",
+  "price": 2655.9806117867465
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/2
+Content-Type: application/json
+
+{
+  "number": 4,
+  "placeClass": "ReservedSeat",
+  "price": 1327.8278362237043
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/2
+Content-Type: application/json
+
+{
+  "number": 5,
+  "placeClass": "ReservedSeat",
+  "price": 2381.5132051116298
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/2
+Content-Type: application/json
+
+{
+  "number": 6,
+  "placeClass": "Compartment",
+  "price": 185.44438353387517
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/2
+Content-Type: application/json
+
+{
+  "number": 7,
+  "placeClass": "ReservedSeat",
+  "price": 3105.592192620465
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/2
+Content-Type: application/json
+
+{
+  "number": 8,
+  "placeClass": "ReservedSeat",
+  "price": 4502.997069932693
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/2
+Content-Type: application/json
+
+{
+  "number": 9,
+  "placeClass": "ReservedSeat",
+  "price": 1706.1889317492073
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/2
+Content-Type: application/json
+
+{
+  "number": 10,
+  "placeClass": "ReservedSeat",
+  "price": 3196.4896049632566
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/2
+Content-Type: application/json
+
+{
+  "number": 11,
+  "placeClass": "ReservedSeat",
+  "price": 4586.686098164213
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/2
+Content-Type: application/json
+
+{
+  "number": 12,
+  "placeClass": "ReservedSeat",
+  "price": 2641.8677970508706
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/2
+Content-Type: application/json
+
+{
+  "number": 13,
+  "placeClass": "Compartment",
+  "price": 265.0380320503598
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/2
+Content-Type: application/json
+
+{
+  "number": 14,
+  "placeClass": "Compartment",
+  "price": 314.55611649598575
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/2
+Content-Type: application/json
+
+{
+  "number": 15,
+  "placeClass": "ReservedSeat",
+  "price": 2905.3295991589257
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/2
+Content-Type: application/json
+
+{
+  "number": 16,
+  "placeClass": "Compartment",
+  "price": 112.04612073942934
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/2
+Content-Type: application/json
+
+{
+  "number": 17,
+  "placeClass": "Compartment",
+  "price": 165.86508924055283
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/2
+Content-Type: application/json
+
+{
+  "number": 18,
+  "placeClass": "Compartment",
+  "price": 305.7900818837089
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/2
+Content-Type: application/json
+
+{
+  "number": 19,
+  "placeClass": "Compartment",
+  "price": 241.9531670668369
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/3
+Content-Type: application/json
+
+{
+  "number": 0,
+  "placeClass": "ReservedSeat",
+  "price": 1553.7967831989226
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/3
+Content-Type: application/json
+
+{
+  "number": 1,
+  "placeClass": "Compartment",
+  "price": 132.99404245825718
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/3
+Content-Type: application/json
+
+{
+  "number": 2,
+  "placeClass": "Compartment",
+  "price": 486.30637103825364
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/3
+Content-Type: application/json
+
+{
+  "number": 3,
+  "placeClass": "ReservedSeat",
+  "price": 2419.6504625491607
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/3
+Content-Type: application/json
+
+{
+  "number": 4,
+  "placeClass": "Compartment",
+  "price": 201.07139840646806
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/3
+Content-Type: application/json
+
+{
+  "number": 5,
+  "placeClass": "Compartment",
+  "price": 180.14363139272697
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/3
+Content-Type: application/json
+
+{
+  "number": 6,
+  "placeClass": "Compartment",
+  "price": 168.59701934205935
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/3
+Content-Type: application/json
+
+{
+  "number": 7,
+  "placeClass": "Compartment",
+  "price": 280.177771075187
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/3
+Content-Type: application/json
+
+{
+  "number": 8,
+  "placeClass": "Compartment",
+  "price": 265.05325019628333
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/3
+Content-Type: application/json
+
+{
+  "number": 9,
+  "placeClass": "Compartment",
+  "price": 402.3207885323717
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/3
+Content-Type: application/json
+
+{
+  "number": 10,
+  "placeClass": "Compartment",
+  "price": 299.0035007423507
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/3
+Content-Type: application/json
+
+{
+  "number": 11,
+  "placeClass": "ReservedSeat",
+  "price": 3018.585893018336
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/3
+Content-Type: application/json
+
+{
+  "number": 12,
+  "placeClass": "ReservedSeat",
+  "price": 3344.8309364766433
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/3
+Content-Type: application/json
+
+{
+  "number": 13,
+  "placeClass": "Compartment",
+  "price": 187.46896460895812
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/3
+Content-Type: application/json
+
+{
+  "number": 14,
+  "placeClass": "Compartment",
+  "price": 428.184901980525
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/3
+Content-Type: application/json
+
+{
+  "number": 15,
+  "placeClass": "Compartment",
+  "price": 304.85135647477483
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/3
+Content-Type: application/json
+
+{
+  "number": 16,
+  "placeClass": "Compartment",
+  "price": 273.87953862712084
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/3
+Content-Type: application/json
+
+{
+  "number": 17,
+  "placeClass": "ReservedSeat",
+  "price": 3881.685628390101
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/4
+Content-Type: application/json
+
+{
+  "number": 0,
+  "placeClass": "ReservedSeat",
+  "price": 1225.9855104633189
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/4
+Content-Type: application/json
+
+{
+  "number": 1,
+  "placeClass": "ReservedSeat",
+  "price": 1850.681196278908
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/4
+Content-Type: application/json
+
+{
+  "number": 2,
+  "placeClass": "ReservedSeat",
+  "price": 4767.962735538938
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/4
+Content-Type: application/json
+
+{
+  "number": 3,
+  "placeClass": "Compartment",
+  "price": 478.1715816429599
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/4
+Content-Type: application/json
+
+{
+  "number": 4,
+  "placeClass": "Compartment",
+  "price": 397.11277091875195
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/4
+Content-Type: application/json
+
+{
+  "number": 5,
+  "placeClass": "ReservedSeat",
+  "price": 4940.77765433513
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/4
+Content-Type: application/json
+
+{
+  "number": 6,
+  "placeClass": "Compartment",
+  "price": 380.05535243833
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/4
+Content-Type: application/json
+
+{
+  "number": 7,
+  "placeClass": "ReservedSeat",
+  "price": 1593.6115901858993
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/4
+Content-Type: application/json
+
+{
+  "number": 8,
+  "placeClass": "Compartment",
+  "price": 216.69775447418135
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/4
+Content-Type: application/json
+
+{
+  "number": 9,
+  "placeClass": "ReservedSeat",
+  "price": 3798.986261843729
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/4
+Content-Type: application/json
+
+{
+  "number": 10,
+  "placeClass": "Compartment",
+  "price": 488.9465751261304
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/4
+Content-Type: application/json
+
+{
+  "number": 11,
+  "placeClass": "ReservedSeat",
+  "price": 3373.817587896066
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/4
+Content-Type: application/json
+
+{
+  "number": 12,
+  "placeClass": "ReservedSeat",
+  "price": 1994.8123919810469
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/4
+Content-Type: application/json
+
+{
+  "number": 13,
+  "placeClass": "ReservedSeat",
+  "price": 2972.4312363242925
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/5
+Content-Type: application/json
+
+{
+  "number": 0,
+  "placeClass": "Compartment",
+  "price": 283.5929644180526
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/5
+Content-Type: application/json
+
+{
+  "number": 1,
+  "placeClass": "ReservedSeat",
+  "price": 2741.119942954835
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/5
+Content-Type: application/json
+
+{
+  "number": 2,
+  "placeClass": "Compartment",
+  "price": 156.63041580310292
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/5
+Content-Type: application/json
+
+{
+  "number": 3,
+  "placeClass": "ReservedSeat",
+  "price": 1888.453110189902
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/5
+Content-Type: application/json
+
+{
+  "number": 4,
+  "placeClass": "Compartment",
+  "price": 148.92230767648815
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/5
+Content-Type: application/json
+
+{
+  "number": 5,
+  "placeClass": "Compartment",
+  "price": 152.59964676041037
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/5
+Content-Type: application/json
+
+{
+  "number": 6,
+  "placeClass": "ReservedSeat",
+  "price": 4550.382463040151
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/5
+Content-Type: application/json
+
+{
+  "number": 7,
+  "placeClass": "Compartment",
+  "price": 490.8935861461168
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/5
+Content-Type: application/json
+
+{
+  "number": 8,
+  "placeClass": "ReservedSeat",
+  "price": 3648.9378534032226
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/5
+Content-Type: application/json
+
+{
+  "number": 9,
+  "placeClass": "ReservedSeat",
+  "price": 1373.81763673862
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/5
+Content-Type: application/json
+
+{
+  "number": 10,
+  "placeClass": "ReservedSeat",
+  "price": 1473.9462531111305
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/5
+Content-Type: application/json
+
+{
+  "number": 11,
+  "placeClass": "ReservedSeat",
+  "price": 4537.396236884491
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/5
+Content-Type: application/json
+
+{
+  "number": 12,
+  "placeClass": "Compartment",
+  "price": 307.26074973517706
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/5
+Content-Type: application/json
+
+{
+  "number": 13,
+  "placeClass": "ReservedSeat",
+  "price": 4314.012308386394
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/5
+Content-Type: application/json
+
+{
+  "number": 14,
+  "placeClass": "ReservedSeat",
+  "price": 1008.3385832307204
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/5
+Content-Type: application/json
+
+{
+  "number": 15,
+  "placeClass": "ReservedSeat",
+  "price": 4681.800597292832
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/6
+Content-Type: application/json
+
+{
+  "number": 0,
+  "placeClass": "Compartment",
+  "price": 335.27162306947326
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/6
+Content-Type: application/json
+
+{
+  "number": 1,
+  "placeClass": "ReservedSeat",
+  "price": 3334.1831243749807
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/6
+Content-Type: application/json
+
+{
+  "number": 2,
+  "placeClass": "ReservedSeat",
+  "price": 4604.764415156165
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/6
+Content-Type: application/json
+
+{
+  "number": 3,
+  "placeClass": "Compartment",
+  "price": 152.29333188158898
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/6
+Content-Type: application/json
+
+{
+  "number": 4,
+  "placeClass": "ReservedSeat",
+  "price": 4249.546452944759
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/6
+Content-Type: application/json
+
+{
+  "number": 5,
+  "placeClass": "ReservedSeat",
+  "price": 1013.8639906784474
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/6
+Content-Type: application/json
+
+{
+  "number": 6,
+  "placeClass": "Compartment",
+  "price": 267.9515097673559
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/6
+Content-Type: application/json
+
+{
+  "number": 7,
+  "placeClass": "ReservedSeat",
+  "price": 3105.6699165469568
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/6
+Content-Type: application/json
+
+{
+  "number": 8,
+  "placeClass": "ReservedSeat",
+  "price": 2271.4769746585644
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/6
+Content-Type: application/json
+
+{
+  "number": 9,
+  "placeClass": "Compartment",
+  "price": 250.91547411715592
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/6
+Content-Type: application/json
+
+{
+  "number": 10,
+  "placeClass": "Compartment",
+  "price": 238.31633700345716
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/6
+Content-Type: application/json
+
+{
+  "number": 11,
+  "placeClass": "ReservedSeat",
+  "price": 4232.261983647761
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/6
+Content-Type: application/json
+
+{
+  "number": 12,
+  "placeClass": "Compartment",
+  "price": 119.31581327429765
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/6
+Content-Type: application/json
+
+{
+  "number": 13,
+  "placeClass": "ReservedSeat",
+  "price": 2246.5119452408153
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/6
+Content-Type: application/json
+
+{
+  "number": 14,
+  "placeClass": "Compartment",
+  "price": 262.8444890166288
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/6
+Content-Type: application/json
+
+{
+  "number": 15,
+  "placeClass": "Compartment",
+  "price": 255.6061574474099
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/7
+Content-Type: application/json
+
+{
+  "number": 0,
+  "placeClass": "Compartment",
+  "price": 247.85228527826075
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/7
+Content-Type: application/json
+
+{
+  "number": 1,
+  "placeClass": "Compartment",
+  "price": 386.76961552002126
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/7
+Content-Type: application/json
+
+{
+  "number": 2,
+  "placeClass": "Compartment",
+  "price": 481.1431160671668
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/7
+Content-Type: application/json
+
+{
+  "number": 3,
+  "placeClass": "ReservedSeat",
+  "price": 4120.995805249358
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/7
+Content-Type: application/json
+
+{
+  "number": 4,
+  "placeClass": "Compartment",
+  "price": 168.98731286233118
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/7
+Content-Type: application/json
+
+{
+  "number": 5,
+  "placeClass": "Compartment",
+  "price": 294.48336732859417
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/7
+Content-Type: application/json
+
+{
+  "number": 6,
+  "placeClass": "ReservedSeat",
+  "price": 3150.4235368547247
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/7
+Content-Type: application/json
+
+{
+  "number": 7,
+  "placeClass": "ReservedSeat",
+  "price": 3402.8416674003656
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/7
+Content-Type: application/json
+
+{
+  "number": 8,
+  "placeClass": "Compartment",
+  "price": 413.28964436386195
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/7
+Content-Type: application/json
+
+{
+  "number": 9,
+  "placeClass": "Compartment",
+  "price": 370.39246402877836
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/7
+Content-Type: application/json
+
+{
+  "number": 10,
+  "placeClass": "Compartment",
+  "price": 144.62436593868463
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/7
+Content-Type: application/json
+
+{
+  "number": 11,
+  "placeClass": "ReservedSeat",
+  "price": 2734.436601246293
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/7
+Content-Type: application/json
+
+{
+  "number": 12,
+  "placeClass": "Compartment",
+  "price": 431.9554744530814
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/8
+Content-Type: application/json
+
+{
+  "number": 0,
+  "placeClass": "Compartment",
+  "price": 268.308915380827
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/8
+Content-Type: application/json
+
+{
+  "number": 1,
+  "placeClass": "ReservedSeat",
+  "price": 4671.989231812954
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/8
+Content-Type: application/json
+
+{
+  "number": 2,
+  "placeClass": "Compartment",
+  "price": 402.3598869286174
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/8
+Content-Type: application/json
+
+{
+  "number": 3,
+  "placeClass": "ReservedSeat",
+  "price": 4810.31067377711
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/8
+Content-Type: application/json
+
+{
+  "number": 4,
+  "placeClass": "Compartment",
+  "price": 498.75373037023553
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/8
+Content-Type: application/json
+
+{
+  "number": 5,
+  "placeClass": "ReservedSeat",
+  "price": 2883.751801488801
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/8
+Content-Type: application/json
+
+{
+  "number": 6,
+  "placeClass": "Compartment",
+  "price": 265.4634189206509
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/8
+Content-Type: application/json
+
+{
+  "number": 7,
+  "placeClass": "ReservedSeat",
+  "price": 3848.6780962143557
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/8
+Content-Type: application/json
+
+{
+  "number": 8,
+  "placeClass": "ReservedSeat",
+  "price": 1014.8315579967888
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/8
+Content-Type: application/json
+
+{
+  "number": 9,
+  "placeClass": "ReservedSeat",
+  "price": 4468.552720551247
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/8
+Content-Type: application/json
+
+{
+  "number": 10,
+  "placeClass": "Compartment",
+  "price": 429.99585909447353
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/8
+Content-Type: application/json
+
+{
+  "number": 11,
+  "placeClass": "ReservedSeat",
+  "price": 2897.949218844412
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/8
+Content-Type: application/json
+
+{
+  "number": 12,
+  "placeClass": "ReservedSeat",
+  "price": 1181.1955360396062
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/8
+Content-Type: application/json
+
+{
+  "number": 13,
+  "placeClass": "Compartment",
+  "price": 393.7099070502745
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/8
+Content-Type: application/json
+
+{
+  "number": 14,
+  "placeClass": "Compartment",
+  "price": 180.21723999112575
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/8
+Content-Type: application/json
+
+{
+  "number": 15,
+  "placeClass": "ReservedSeat",
+  "price": 4163.1529127841195
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/9
+Content-Type: application/json
+
+{
+  "number": 0,
+  "placeClass": "ReservedSeat",
+  "price": 4685.1232727764755
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/9
+Content-Type: application/json
+
+{
+  "number": 1,
+  "placeClass": "Compartment",
+  "price": 151.63901486813637
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/9
+Content-Type: application/json
+
+{
+  "number": 2,
+  "placeClass": "Compartment",
+  "price": 375.98416216009565
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/9
+Content-Type: application/json
+
+{
+  "number": 3,
+  "placeClass": "Compartment",
+  "price": 419.8580805828371
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/9
+Content-Type: application/json
+
+{
+  "number": 4,
+  "placeClass": "Compartment",
+  "price": 210.5254640548511
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/9
+Content-Type: application/json
+
+{
+  "number": 5,
+  "placeClass": "Compartment",
+  "price": 255.7875004031744
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/9
+Content-Type: application/json
+
+{
+  "number": 6,
+  "placeClass": "Compartment",
+  "price": 176.30028540989588
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/9
+Content-Type: application/json
+
+{
+  "number": 7,
+  "placeClass": "Compartment",
+  "price": 481.0059849850043
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/9
+Content-Type: application/json
+
+{
+  "number": 8,
+  "placeClass": "ReservedSeat",
+  "price": 2756.8039389791
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/9
+Content-Type: application/json
+
+{
+  "number": 9,
+  "placeClass": "Compartment",
+  "price": 299.18588876565155
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/9
+Content-Type: application/json
+
+{
+  "number": 10,
+  "placeClass": "Compartment",
+  "price": 173.64006544832887
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/9
+Content-Type: application/json
+
+{
+  "number": 11,
+  "placeClass": "ReservedSeat",
+  "price": 3446.961159812118
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/9
+Content-Type: application/json
+
+{
+  "number": 12,
+  "placeClass": "ReservedSeat",
+  "price": 2690.589333909291
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/9
+Content-Type: application/json
+
+{
+  "number": 13,
+  "placeClass": "Compartment",
+  "price": 152.059614389886
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/9
+Content-Type: application/json
+
+{
+  "number": 14,
+  "placeClass": "Compartment",
+  "price": 203.65799498498353
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/10
+Content-Type: application/json
+
+{
+  "number": 0,
+  "placeClass": "ReservedSeat",
+  "price": 2158.9952877428614
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/10
+Content-Type: application/json
+
+{
+  "number": 1,
+  "placeClass": "ReservedSeat",
+  "price": 4373.361495230765
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/10
+Content-Type: application/json
+
+{
+  "number": 2,
+  "placeClass": "Compartment",
+  "price": 152.15566173016953
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/10
+Content-Type: application/json
+
+{
+  "number": 3,
+  "placeClass": "ReservedSeat",
+  "price": 3057.4170638403034
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/10
+Content-Type: application/json
+
+{
+  "number": 4,
+  "placeClass": "Compartment",
+  "price": 215.38126161825386
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/10
+Content-Type: application/json
+
+{
+  "number": 5,
+  "placeClass": "Compartment",
+  "price": 176.35914194793503
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/10
+Content-Type: application/json
+
+{
+  "number": 6,
+  "placeClass": "Compartment",
+  "price": 161.2263529325668
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/10
+Content-Type: application/json
+
+{
+  "number": 7,
+  "placeClass": "ReservedSeat",
+  "price": 4729.092043146019
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/10
+Content-Type: application/json
+
+{
+  "number": 8,
+  "placeClass": "Compartment",
+  "price": 273.3991234558089
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/10
+Content-Type: application/json
+
+{
+  "number": 9,
+  "placeClass": "Compartment",
+  "price": 250.74385675257562
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/10
+Content-Type: application/json
+
+{
+  "number": 10,
+  "placeClass": "ReservedSeat",
+  "price": 1302.1390118598956
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/10
+Content-Type: application/json
+
+{
+  "number": 11,
+  "placeClass": "Compartment",
+  "price": 359.36010162064883
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/10
+Content-Type: application/json
+
+{
+  "number": 12,
+  "placeClass": "ReservedSeat",
+  "price": 1359.741365227391
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/10
+Content-Type: application/json
+
+{
+  "number": 13,
+  "placeClass": "ReservedSeat",
+  "price": 2937.2936595174506
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/10
+Content-Type: application/json
+
+{
+  "number": 14,
+  "placeClass": "ReservedSeat",
+  "price": 4597.806168567056
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/10
+Content-Type: application/json
+
+{
+  "number": 15,
+  "placeClass": "ReservedSeat",
+  "price": 2553.5328095540317
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/10
+Content-Type: application/json
+
+{
+  "number": 16,
+  "placeClass": "Compartment",
+  "price": 184.12104010218087
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/10
+Content-Type: application/json
+
+{
+  "number": 17,
+  "placeClass": "Compartment",
+  "price": 159.97204664533763
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/10
+Content-Type: application/json
+
+{
+  "number": 18,
+  "placeClass": "ReservedSeat",
+  "price": 2378.6235266273543
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/11
+Content-Type: application/json
+
+{
+  "number": 0,
+  "placeClass": "Compartment",
+  "price": 283.32721028505006
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/11
+Content-Type: application/json
+
+{
+  "number": 1,
+  "placeClass": "Compartment",
+  "price": 206.56983862175898
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/11
+Content-Type: application/json
+
+{
+  "number": 2,
+  "placeClass": "ReservedSeat",
+  "price": 4563.96516521237
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/11
+Content-Type: application/json
+
+{
+  "number": 3,
+  "placeClass": "Compartment",
+  "price": 256.3450579176041
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/11
+Content-Type: application/json
+
+{
+  "number": 4,
+  "placeClass": "Compartment",
+  "price": 245.94524744340808
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/11
+Content-Type: application/json
+
+{
+  "number": 5,
+  "placeClass": "Compartment",
+  "price": 421.65623215702806
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/11
+Content-Type: application/json
+
+{
+  "number": 6,
+  "placeClass": "Compartment",
+  "price": 485.78345066375476
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/11
+Content-Type: application/json
+
+{
+  "number": 7,
+  "placeClass": "Compartment",
+  "price": 303.8668869206862
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/11
+Content-Type: application/json
+
+{
+  "number": 8,
+  "placeClass": "Compartment",
+  "price": 314.71681425683647
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/11
+Content-Type: application/json
+
+{
+  "number": 9,
+  "placeClass": "Compartment",
+  "price": 184.20480226327925
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/11
+Content-Type: application/json
+
+{
+  "number": 10,
+  "placeClass": "ReservedSeat",
+  "price": 1647.9910414969283
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/11
+Content-Type: application/json
+
+{
+  "number": 11,
+  "placeClass": "Compartment",
+  "price": 369.6188803684827
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/11
+Content-Type: application/json
+
+{
+  "number": 12,
+  "placeClass": "ReservedSeat",
+  "price": 4756.728709346506
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/11
+Content-Type: application/json
+
+{
+  "number": 13,
+  "placeClass": "ReservedSeat",
+  "price": 2503.9926865308626
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/11
+Content-Type: application/json
+
+{
+  "number": 14,
+  "placeClass": "ReservedSeat",
+  "price": 2943.3698399836003
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/11
+Content-Type: application/json
+
+{
+  "number": 15,
+  "placeClass": "Compartment",
+  "price": 487.6884705919132
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/11
+Content-Type: application/json
+
+{
+  "number": 16,
+  "placeClass": "ReservedSeat",
+  "price": 3278.821974460086
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/11
+Content-Type: application/json
+
+{
+  "number": 17,
+  "placeClass": "ReservedSeat",
+  "price": 1884.6370102411086
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/11
+Content-Type: application/json
+
+{
+  "number": 18,
+  "placeClass": "ReservedSeat",
+  "price": 3874.3978073342096
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/11
+Content-Type: application/json
+
+{
+  "number": 19,
+  "placeClass": "ReservedSeat",
+  "price": 1275.2442221668985
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/11
+Content-Type: application/json
+
+{
+  "number": 20,
+  "placeClass": "ReservedSeat",
+  "price": 2947.9055115099145
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/11
+Content-Type: application/json
+
+{
+  "number": 21,
+  "placeClass": "Compartment",
+  "price": 240.47169765644068
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/11
+Content-Type: application/json
+
+{
+  "number": 22,
+  "placeClass": "Compartment",
+  "price": 218.7855128527035
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/11
+Content-Type: application/json
+
+{
+  "number": 23,
+  "placeClass": "Compartment",
+  "price": 338.6194867140748
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/11
+Content-Type: application/json
+
+{
+  "number": 24,
+  "placeClass": "Compartment",
+  "price": 266.9319365725698
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/11
+Content-Type: application/json
+
+{
+  "number": 25,
+  "placeClass": "ReservedSeat",
+  "price": 4862.307192933822
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/12
+Content-Type: application/json
+
+{
+  "number": 0,
+  "placeClass": "Compartment",
+  "price": 346.10550233866513
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/12
+Content-Type: application/json
+
+{
+  "number": 1,
+  "placeClass": "ReservedSeat",
+  "price": 4584.392545168531
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/12
+Content-Type: application/json
+
+{
+  "number": 2,
+  "placeClass": "Compartment",
+  "price": 282.7828761113815
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/12
+Content-Type: application/json
+
+{
+  "number": 3,
+  "placeClass": "ReservedSeat",
+  "price": 2107.256957961519
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/12
+Content-Type: application/json
+
+{
+  "number": 4,
+  "placeClass": "Compartment",
+  "price": 420.2618380295506
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/12
+Content-Type: application/json
+
+{
+  "number": 5,
+  "placeClass": "Compartment",
+  "price": 103.7345168761072
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/12
+Content-Type: application/json
+
+{
+  "number": 6,
+  "placeClass": "Compartment",
+  "price": 106.24094909826769
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/12
+Content-Type: application/json
+
+{
+  "number": 7,
+  "placeClass": "ReservedSeat",
+  "price": 1852.0046093918338
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/12
+Content-Type: application/json
+
+{
+  "number": 8,
+  "placeClass": "Compartment",
+  "price": 435.50568018932745
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/12
+Content-Type: application/json
+
+{
+  "number": 9,
+  "placeClass": "Compartment",
+  "price": 103.73112827954638
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/12
+Content-Type: application/json
+
+{
+  "number": 10,
+  "placeClass": "Compartment",
+  "price": 158.40516846716542
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/12
+Content-Type: application/json
+
+{
+  "number": 11,
+  "placeClass": "ReservedSeat",
+  "price": 1167.5132985204013
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/12
+Content-Type: application/json
+
+{
+  "number": 12,
+  "placeClass": "ReservedSeat",
+  "price": 1832.1364100479664
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/12
+Content-Type: application/json
+
+{
+  "number": 13,
+  "placeClass": "ReservedSeat",
+  "price": 1693.8905995979462
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/13
+Content-Type: application/json
+
+{
+  "number": 0,
+  "placeClass": "ReservedSeat",
+  "price": 4794.63228229922
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/13
+Content-Type: application/json
+
+{
+  "number": 1,
+  "placeClass": "Compartment",
+  "price": 250.91887338555617
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/13
+Content-Type: application/json
+
+{
+  "number": 2,
+  "placeClass": "Compartment",
+  "price": 372.09130916411186
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/13
+Content-Type: application/json
+
+{
+  "number": 3,
+  "placeClass": "ReservedSeat",
+  "price": 2119.5401508883033
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/13
+Content-Type: application/json
+
+{
+  "number": 4,
+  "placeClass": "Compartment",
+  "price": 317.22370757456395
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/13
+Content-Type: application/json
+
+{
+  "number": 5,
+  "placeClass": "ReservedSeat",
+  "price": 1622.9570716432572
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/13
+Content-Type: application/json
+
+{
+  "number": 6,
+  "placeClass": "ReservedSeat",
+  "price": 4277.979276853759
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/13
+Content-Type: application/json
+
+{
+  "number": 7,
+  "placeClass": "Compartment",
+  "price": 318.5465063801737
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/13
+Content-Type: application/json
+
+{
+  "number": 8,
+  "placeClass": "ReservedSeat",
+  "price": 4242.110553105429
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/13
+Content-Type: application/json
+
+{
+  "number": 9,
+  "placeClass": "ReservedSeat",
+  "price": 1000.8929182210986
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/13
+Content-Type: application/json
+
+{
+  "number": 10,
+  "placeClass": "Compartment",
+  "price": 324.87862425540914
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/13
+Content-Type: application/json
+
+{
+  "number": 11,
+  "placeClass": "ReservedSeat",
+  "price": 1822.9359258592788
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/13
+Content-Type: application/json
+
+{
+  "number": 12,
+  "placeClass": "ReservedSeat",
+  "price": 4001.407134295769
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/13
+Content-Type: application/json
+
+{
+  "number": 13,
+  "placeClass": "Compartment",
+  "price": 131.6055610183342
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/13
+Content-Type: application/json
+
+{
+  "number": 14,
+  "placeClass": "ReservedSeat",
+  "price": 1278.5761158013652
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/13
+Content-Type: application/json
+
+{
+  "number": 15,
+  "placeClass": "Compartment",
+  "price": 458.71532351274595
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/13
+Content-Type: application/json
+
+{
+  "number": 16,
+  "placeClass": "ReservedSeat",
+  "price": 2003.6542415527658
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/13
+Content-Type: application/json
+
+{
+  "number": 17,
+  "placeClass": "ReservedSeat",
+  "price": 3185.7384885475726
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/13
+Content-Type: application/json
+
+{
+  "number": 18,
+  "placeClass": "ReservedSeat",
+  "price": 2062.9009122021007
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/14
+Content-Type: application/json
+
+{
+  "number": 0,
+  "placeClass": "Compartment",
+  "price": 399.41733835849385
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/14
+Content-Type: application/json
+
+{
+  "number": 1,
+  "placeClass": "Compartment",
+  "price": 213.45414445202957
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/14
+Content-Type: application/json
+
+{
+  "number": 2,
+  "placeClass": "ReservedSeat",
+  "price": 2008.7774214156902
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/14
+Content-Type: application/json
+
+{
+  "number": 3,
+  "placeClass": "ReservedSeat",
+  "price": 4597.179215069544
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/14
+Content-Type: application/json
+
+{
+  "number": 4,
+  "placeClass": "Compartment",
+  "price": 169.72580495323143
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/14
+Content-Type: application/json
+
+{
+  "number": 5,
+  "placeClass": "Compartment",
+  "price": 365.7067327993404
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/14
+Content-Type: application/json
+
+{
+  "number": 6,
+  "placeClass": "Compartment",
+  "price": 189.69528054048328
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/14
+Content-Type: application/json
+
+{
+  "number": 7,
+  "placeClass": "ReservedSeat",
+  "price": 4262.042768194886
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/14
+Content-Type: application/json
+
+{
+  "number": 8,
+  "placeClass": "Compartment",
+  "price": 392.66509385232973
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/14
+Content-Type: application/json
+
+{
+  "number": 9,
+  "placeClass": "ReservedSeat",
+  "price": 1702.022056887251
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/14
+Content-Type: application/json
+
+{
+  "number": 10,
+  "placeClass": "ReservedSeat",
+  "price": 2840.6943143088956
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/14
+Content-Type: application/json
+
+{
+  "number": 11,
+  "placeClass": "Compartment",
+  "price": 400.68109472525197
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/14
+Content-Type: application/json
+
+{
+  "number": 12,
+  "placeClass": "Compartment",
+  "price": 377.7167799944921
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/14
+Content-Type: application/json
+
+{
+  "number": 13,
+  "placeClass": "ReservedSeat",
+  "price": 4200.272524214224
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/14
+Content-Type: application/json
+
+{
+  "number": 14,
+  "placeClass": "Compartment",
+  "price": 348.0379371090393
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/14
+Content-Type: application/json
+
+{
+  "number": 15,
+  "placeClass": "Compartment",
+  "price": 224.30055816180936
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/14
+Content-Type: application/json
+
+{
+  "number": 16,
+  "placeClass": "ReservedSeat",
+  "price": 4112.986440837363
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/15
+Content-Type: application/json
+
+{
+  "number": 0,
+  "placeClass": "Compartment",
+  "price": 147.0377892286477
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/15
+Content-Type: application/json
+
+{
+  "number": 1,
+  "placeClass": "ReservedSeat",
+  "price": 2849.7656024459693
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/15
+Content-Type: application/json
+
+{
+  "number": 2,
+  "placeClass": "ReservedSeat",
+  "price": 3079.9926232477046
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/15
+Content-Type: application/json
+
+{
+  "number": 3,
+  "placeClass": "ReservedSeat",
+  "price": 3575.389704866266
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/15
+Content-Type: application/json
+
+{
+  "number": 4,
+  "placeClass": "Compartment",
+  "price": 459.8474868553206
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/15
+Content-Type: application/json
+
+{
+  "number": 5,
+  "placeClass": "ReservedSeat",
+  "price": 4510.644309016572
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/15
+Content-Type: application/json
+
+{
+  "number": 6,
+  "placeClass": "ReservedSeat",
+  "price": 1320.799640102705
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/15
+Content-Type: application/json
+
+{
+  "number": 7,
+  "placeClass": "Compartment",
+  "price": 495.6521579008309
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/15
+Content-Type: application/json
+
+{
+  "number": 8,
+  "placeClass": "ReservedSeat",
+  "price": 3767.9277640693317
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/15
+Content-Type: application/json
+
+{
+  "number": 9,
+  "placeClass": "Compartment",
+  "price": 120.87520203808238
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/15
+Content-Type: application/json
+
+{
+  "number": 10,
+  "placeClass": "Compartment",
+  "price": 269.19972771795494
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/15
+Content-Type: application/json
+
+{
+  "number": 11,
+  "placeClass": "Compartment",
+  "price": 187.07595153805227
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/15
+Content-Type: application/json
+
+{
+  "number": 12,
+  "placeClass": "Compartment",
+  "price": 394.3045198639139
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/16
+Content-Type: application/json
+
+{
+  "number": 0,
+  "placeClass": "ReservedSeat",
+  "price": 2266.152105780474
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/16
+Content-Type: application/json
+
+{
+  "number": 1,
+  "placeClass": "Compartment",
+  "price": 410.365306918506
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/16
+Content-Type: application/json
+
+{
+  "number": 2,
+  "placeClass": "ReservedSeat",
+  "price": 1372.6400263979906
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/16
+Content-Type: application/json
+
+{
+  "number": 3,
+  "placeClass": "ReservedSeat",
+  "price": 1899.9314681929409
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/16
+Content-Type: application/json
+
+{
+  "number": 4,
+  "placeClass": "Compartment",
+  "price": 428.50220876780423
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/16
+Content-Type: application/json
+
+{
+  "number": 5,
+  "placeClass": "Compartment",
+  "price": 175.5122525276068
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/16
+Content-Type: application/json
+
+{
+  "number": 6,
+  "placeClass": "Compartment",
+  "price": 282.5548359140414
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/16
+Content-Type: application/json
+
+{
+  "number": 7,
+  "placeClass": "Compartment",
+  "price": 219.3775256535787
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/16
+Content-Type: application/json
+
+{
+  "number": 8,
+  "placeClass": "ReservedSeat",
+  "price": 1523.2732735320506
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/16
+Content-Type: application/json
+
+{
+  "number": 9,
+  "placeClass": "Compartment",
+  "price": 170.44012154448689
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/16
+Content-Type: application/json
+
+{
+  "number": 10,
+  "placeClass": "Compartment",
+  "price": 300.5585970212553
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/16
+Content-Type: application/json
+
+{
+  "number": 11,
+  "placeClass": "ReservedSeat",
+  "price": 4502.634842743857
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/16
+Content-Type: application/json
+
+{
+  "number": 12,
+  "placeClass": "ReservedSeat",
+  "price": 3613.743218935287
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/16
+Content-Type: application/json
+
+{
+  "number": 13,
+  "placeClass": "Compartment",
+  "price": 285.14646691784526
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/16
+Content-Type: application/json
+
+{
+  "number": 14,
+  "placeClass": "Compartment",
+  "price": 147.20193415093252
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/16
+Content-Type: application/json
+
+{
+  "number": 15,
+  "placeClass": "ReservedSeat",
+  "price": 2060.7290354866996
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/16
+Content-Type: application/json
+
+{
+  "number": 16,
+  "placeClass": "ReservedSeat",
+  "price": 4806.494227061187
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/16
+Content-Type: application/json
+
+{
+  "number": 17,
+  "placeClass": "ReservedSeat",
+  "price": 3916.974628025465
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/16
+Content-Type: application/json
+
+{
+  "number": 18,
+  "placeClass": "Compartment",
+  "price": 300.09050485928014
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/16
+Content-Type: application/json
+
+{
+  "number": 19,
+  "placeClass": "ReservedSeat",
+  "price": 1048.6820830217926
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/17
+Content-Type: application/json
+
+{
+  "number": 0,
+  "placeClass": "Compartment",
+  "price": 366.4111492285901
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/17
+Content-Type: application/json
+
+{
+  "number": 1,
+  "placeClass": "ReservedSeat",
+  "price": 2458.0088007255517
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/17
+Content-Type: application/json
+
+{
+  "number": 2,
+  "placeClass": "Compartment",
+  "price": 139.35589716931793
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/17
+Content-Type: application/json
+
+{
+  "number": 3,
+  "placeClass": "Compartment",
+  "price": 243.58544711310333
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/17
+Content-Type: application/json
+
+{
+  "number": 4,
+  "placeClass": "Compartment",
+  "price": 317.69457866153937
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/17
+Content-Type: application/json
+
+{
+  "number": 5,
+  "placeClass": "Compartment",
+  "price": 418.32231632533495
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/17
+Content-Type: application/json
+
+{
+  "number": 6,
+  "placeClass": "Compartment",
+  "price": 139.61944231988994
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/17
+Content-Type: application/json
+
+{
+  "number": 7,
+  "placeClass": "ReservedSeat",
+  "price": 2017.213314217667
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/17
+Content-Type: application/json
+
+{
+  "number": 8,
+  "placeClass": "Compartment",
+  "price": 402.83462292176813
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/17
+Content-Type: application/json
+
+{
+  "number": 9,
+  "placeClass": "ReservedSeat",
+  "price": 2906.0617453961413
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/17
+Content-Type: application/json
+
+{
+  "number": 10,
+  "placeClass": "Compartment",
+  "price": 428.5063258600487
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/17
+Content-Type: application/json
+
+{
+  "number": 11,
+  "placeClass": "ReservedSeat",
+  "price": 3252.148630600222
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/17
+Content-Type: application/json
+
+{
+  "number": 12,
+  "placeClass": "ReservedSeat",
+  "price": 4332.746358501805
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/17
+Content-Type: application/json
+
+{
+  "number": 13,
+  "placeClass": "ReservedSeat",
+  "price": 4626.530039006984
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/18
+Content-Type: application/json
+
+{
+  "number": 0,
+  "placeClass": "ReservedSeat",
+  "price": 1391.706718477992
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/18
+Content-Type: application/json
+
+{
+  "number": 1,
+  "placeClass": "ReservedSeat",
+  "price": 3066.1907338637143
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/18
+Content-Type: application/json
+
+{
+  "number": 2,
+  "placeClass": "Compartment",
+  "price": 397.80288454274717
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/18
+Content-Type: application/json
+
+{
+  "number": 3,
+  "placeClass": "Compartment",
+  "price": 172.77499886963784
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/18
+Content-Type: application/json
+
+{
+  "number": 4,
+  "placeClass": "Compartment",
+  "price": 193.9768750901115
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/18
+Content-Type: application/json
+
+{
+  "number": 5,
+  "placeClass": "ReservedSeat",
+  "price": 4750.142087841629
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/18
+Content-Type: application/json
+
+{
+  "number": 6,
+  "placeClass": "ReservedSeat",
+  "price": 3877.081572398445
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/18
+Content-Type: application/json
+
+{
+  "number": 7,
+  "placeClass": "ReservedSeat",
+  "price": 4011.9927174404547
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/18
+Content-Type: application/json
+
+{
+  "number": 8,
+  "placeClass": "ReservedSeat",
+  "price": 1414.7007208482737
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/18
+Content-Type: application/json
+
+{
+  "number": 9,
+  "placeClass": "Compartment",
+  "price": 210.39855495550705
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/18
+Content-Type: application/json
+
+{
+  "number": 10,
+  "placeClass": "ReservedSeat",
+  "price": 3126.237431241192
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/18
+Content-Type: application/json
+
+{
+  "number": 11,
+  "placeClass": "Compartment",
+  "price": 484.6119967835127
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train/18
+Content-Type: application/json
+
+{
+  "number": 12,
+  "placeClass": "Compartment",
+  "price": 138.12436000201495
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train-express/1
+Content-Type: application/json
+
+{
+  "number": 0,
+  "placeClass": "Compartment",
+  "price": 249.21169169967015
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train-express/1
+Content-Type: application/json
+
+{
+  "number": 1,
+  "placeClass": "ReservedSeat",
+  "price": 1922.512483279228
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train-express/1
+Content-Type: application/json
+
+{
+  "number": 2,
+  "placeClass": "Compartment",
+  "price": 133.81826301884274
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train-express/1
+Content-Type: application/json
+
+{
+  "number": 3,
+  "placeClass": "Compartment",
+  "price": 147.4079093135785
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train-express/1
+Content-Type: application/json
+
+{
+  "number": 4,
+  "placeClass": "Compartment",
+  "price": 204.85341979158312
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train-express/1
+Content-Type: application/json
+
+{
+  "number": 5,
+  "placeClass": "ReservedSeat",
+  "price": 2249.2511824681096
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train-express/1
+Content-Type: application/json
+
+{
+  "number": 6,
+  "placeClass": "Compartment",
+  "price": 167.97068215791035
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train-express/1
+Content-Type: application/json
+
+{
+  "number": 7,
+  "placeClass": "ReservedSeat",
+  "price": 2969.645999221008
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train-express/1
+Content-Type: application/json
+
+{
+  "number": 8,
+  "placeClass": "ReservedSeat",
+  "price": 3737.5530729392544
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train-express/1
+Content-Type: application/json
+
+{
+  "number": 9,
+  "placeClass": "ReservedSeat",
+  "price": 3742.4780964401475
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train-express/1
+Content-Type: application/json
+
+{
+  "number": 10,
+  "placeClass": "ReservedSeat",
+  "price": 1209.3984495658021
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train-express/1
+Content-Type: application/json
+
+{
+  "number": 11,
+  "placeClass": "Compartment",
+  "price": 110.09481550396151
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train-express/1
+Content-Type: application/json
+
+{
+  "number": 12,
+  "placeClass": "Compartment",
+  "price": 349.5874222733788
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train-express/1
+Content-Type: application/json
+
+{
+  "number": 13,
+  "placeClass": "Compartment",
+  "price": 449.051439620493
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train-express/1
+Content-Type: application/json
+
+{
+  "number": 14,
+  "placeClass": "ReservedSeat",
+  "price": 2745.9677706627326
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train-express/1
+Content-Type: application/json
+
+{
+  "number": 15,
+  "placeClass": "Compartment",
+  "price": 385.4973666982545
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train-express/1
+Content-Type: application/json
+
+{
+  "number": 16,
+  "placeClass": "ReservedSeat",
+  "price": 3305.8613715930974
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train-express/1
+Content-Type: application/json
+
+{
+  "number": 17,
+  "placeClass": "ReservedSeat",
+  "price": 4495.818052163531
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train-express/1
+Content-Type: application/json
+
+{
+  "number": 18,
+  "placeClass": "ReservedSeat",
+  "price": 3824.162242841545
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train-express/1
+Content-Type: application/json
+
+{
+  "number": 19,
+  "placeClass": "ReservedSeat",
+  "price": 3522.8564229028902
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train-express/2
+Content-Type: application/json
+
+{
+  "number": 0,
+  "placeClass": "Compartment",
+  "price": 498.6303380936714
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train-express/2
+Content-Type: application/json
+
+{
+  "number": 1,
+  "placeClass": "ReservedSeat",
+  "price": 2887.432771606865
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train-express/2
+Content-Type: application/json
+
+{
+  "number": 2,
+  "placeClass": "Compartment",
+  "price": 178.83782762497526
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train-express/2
+Content-Type: application/json
+
+{
+  "number": 3,
+  "placeClass": "ReservedSeat",
+  "price": 4802.637945874011
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train-express/2
+Content-Type: application/json
+
+{
+  "number": 4,
+  "placeClass": "Compartment",
+  "price": 171.83971027483454
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train-express/2
+Content-Type: application/json
+
+{
+  "number": 5,
+  "placeClass": "Compartment",
+  "price": 319.46375093869756
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train-express/2
+Content-Type: application/json
+
+{
+  "number": 6,
+  "placeClass": "Compartment",
+  "price": 123.96827855725267
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train-express/2
+Content-Type: application/json
+
+{
+  "number": 7,
+  "placeClass": "Compartment",
+  "price": 274.3816304645956
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train-express/2
+Content-Type: application/json
+
+{
+  "number": 8,
+  "placeClass": "ReservedSeat",
+  "price": 4167.948890260448
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train-express/2
+Content-Type: application/json
+
+{
+  "number": 9,
+  "placeClass": "ReservedSeat",
+  "price": 3914.6417667786905
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train-express/2
+Content-Type: application/json
+
+{
+  "number": 10,
+  "placeClass": "Compartment",
+  "price": 386.7525068124978
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train-express/2
+Content-Type: application/json
+
+{
+  "number": 11,
+  "placeClass": "ReservedSeat",
+  "price": 2584.1886157895938
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train-express/2
+Content-Type: application/json
+
+{
+  "number": 12,
+  "placeClass": "ReservedSeat",
+  "price": 2232.3760753173865
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train-express/2
+Content-Type: application/json
+
+{
+  "number": 13,
+  "placeClass": "ReservedSeat",
+  "price": 4198.680895517751
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train-express/2
+Content-Type: application/json
+
+{
+  "number": 14,
+  "placeClass": "Compartment",
+  "price": 406.4341547209653
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train-express/2
+Content-Type: application/json
+
+{
+  "number": 15,
+  "placeClass": "Compartment",
+  "price": 308.80594213986825
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train-express/2
+Content-Type: application/json
+
+{
+  "number": 16,
+  "placeClass": "ReservedSeat",
+  "price": 1277.429452912902
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train-express/2
+Content-Type: application/json
+
+{
+  "number": 17,
+  "placeClass": "Compartment",
+  "price": 144.74829409882753
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train-express/2
+Content-Type: application/json
+
+{
+  "number": 18,
+  "placeClass": "ReservedSeat",
+  "price": 2298.402056260148
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train-express/3
+Content-Type: application/json
+
+{
+  "number": 0,
+  "placeClass": "ReservedSeat",
+  "price": 4174.289950395796
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train-express/3
+Content-Type: application/json
+
+{
+  "number": 1,
+  "placeClass": "ReservedSeat",
+  "price": 3030.6140704655327
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train-express/3
+Content-Type: application/json
+
+{
+  "number": 2,
+  "placeClass": "ReservedSeat",
+  "price": 4665.483447602786
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train-express/3
+Content-Type: application/json
+
+{
+  "number": 3,
+  "placeClass": "Compartment",
+  "price": 475.04534117326693
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train-express/3
+Content-Type: application/json
+
+{
+  "number": 4,
+  "placeClass": "ReservedSeat",
+  "price": 2112.8724586263397
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train-express/3
+Content-Type: application/json
+
+{
+  "number": 5,
+  "placeClass": "ReservedSeat",
+  "price": 2477.349991391582
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train-express/3
+Content-Type: application/json
+
+{
+  "number": 6,
+  "placeClass": "ReservedSeat",
+  "price": 4924.7643863064095
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train-express/3
+Content-Type: application/json
+
+{
+  "number": 7,
+  "placeClass": "ReservedSeat",
+  "price": 3393.517843893294
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train-express/3
+Content-Type: application/json
+
+{
+  "number": 8,
+  "placeClass": "Compartment",
+  "price": 129.84267693919838
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train-express/3
+Content-Type: application/json
+
+{
+  "number": 9,
+  "placeClass": "Compartment",
+  "price": 380.35317496763173
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train-express/3
+Content-Type: application/json
+
+{
+  "number": 10,
+  "placeClass": "ReservedSeat",
+  "price": 3006.9872317407535
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train-express/3
+Content-Type: application/json
+
+{
+  "number": 11,
+  "placeClass": "Compartment",
+  "price": 164.23365898514385
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train-express/3
+Content-Type: application/json
+
+{
+  "number": 12,
+  "placeClass": "ReservedSeat",
+  "price": 3046.6740655555104
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train-express/3
+Content-Type: application/json
+
+{
+  "number": 13,
+  "placeClass": "Compartment",
+  "price": 308.0718433635367
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train-express/3
+Content-Type: application/json
+
+{
+  "number": 14,
+  "placeClass": "ReservedSeat",
+  "price": 2209.4595696524866
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train-express/4
+Content-Type: application/json
+
+{
+  "number": 0,
+  "placeClass": "Compartment",
+  "price": 382.23977555096644
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train-express/4
+Content-Type: application/json
+
+{
+  "number": 1,
+  "placeClass": "ReservedSeat",
+  "price": 1543.7297291611474
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train-express/4
+Content-Type: application/json
+
+{
+  "number": 2,
+  "placeClass": "ReservedSeat",
+  "price": 4768.48161079685
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train-express/4
+Content-Type: application/json
+
+{
+  "number": 3,
+  "placeClass": "Compartment",
+  "price": 474.80125140664245
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train-express/4
+Content-Type: application/json
+
+{
+  "number": 4,
+  "placeClass": "Compartment",
+  "price": 332.1724878273924
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train-express/4
+Content-Type: application/json
+
+{
+  "number": 5,
+  "placeClass": "ReservedSeat",
+  "price": 1341.427953511446
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train-express/4
+Content-Type: application/json
+
+{
+  "number": 6,
+  "placeClass": "ReservedSeat",
+  "price": 3648.4940904167265
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train-express/4
+Content-Type: application/json
+
+{
+  "number": 7,
+  "placeClass": "Compartment",
+  "price": 412.67931485062485
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train-express/4
+Content-Type: application/json
+
+{
+  "number": 8,
+  "placeClass": "Compartment",
+  "price": 254.81366740124662
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train-express/4
+Content-Type: application/json
+
+{
+  "number": 9,
+  "placeClass": "ReservedSeat",
+  "price": 3997.8971913271366
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train-express/5
+Content-Type: application/json
+
+{
+  "number": 0,
+  "placeClass": "Compartment",
+  "price": 496.66022964155655
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train-express/5
+Content-Type: application/json
+
+{
+  "number": 1,
+  "placeClass": "Compartment",
+  "price": 361.51300372030374
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train-express/5
+Content-Type: application/json
+
+{
+  "number": 2,
+  "placeClass": "ReservedSeat",
+  "price": 3889.840790763588
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train-express/5
+Content-Type: application/json
+
+{
+  "number": 3,
+  "placeClass": "Compartment",
+  "price": 469.4510262647933
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train-express/5
+Content-Type: application/json
+
+{
+  "number": 4,
+  "placeClass": "Compartment",
+  "price": 159.7905673091127
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train-express/5
+Content-Type: application/json
+
+{
+  "number": 5,
+  "placeClass": "ReservedSeat",
+  "price": 1344.8747136411673
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train-express/5
+Content-Type: application/json
+
+{
+  "number": 6,
+  "placeClass": "Compartment",
+  "price": 322.5678119397978
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train-express/5
+Content-Type: application/json
+
+{
+  "number": 7,
+  "placeClass": "ReservedSeat",
+  "price": 3894.7733079859704
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train-express/5
+Content-Type: application/json
+
+{
+  "number": 8,
+  "placeClass": "ReservedSeat",
+  "price": 3582.8706623989874
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train-express/5
+Content-Type: application/json
+
+{
+  "number": 9,
+  "placeClass": "Compartment",
+  "price": 224.60142506255406
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train-express/5
+Content-Type: application/json
+
+{
+  "number": 10,
+  "placeClass": "ReservedSeat",
+  "price": 4687.214218303309
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train-express/5
+Content-Type: application/json
+
+{
+  "number": 11,
+  "placeClass": "Compartment",
+  "price": 402.6810448413567
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train-express/5
+Content-Type: application/json
+
+{
+  "number": 12,
+  "placeClass": "Compartment",
+  "price": 135.6807982383557
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train-express/5
+Content-Type: application/json
+
+{
+  "number": 13,
+  "placeClass": "Compartment",
+  "price": 357.3924532228039
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train-express/6
+Content-Type: application/json
+
+{
+  "number": 0,
+  "placeClass": "Compartment",
+  "price": 452.1470947936623
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train-express/6
+Content-Type: application/json
+
+{
+  "number": 1,
+  "placeClass": "Compartment",
+  "price": 300.7993089646082
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train-express/6
+Content-Type: application/json
+
+{
+  "number": 2,
+  "placeClass": "ReservedSeat",
+  "price": 4842.934808884859
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train-express/6
+Content-Type: application/json
+
+{
+  "number": 3,
+  "placeClass": "ReservedSeat",
+  "price": 1453.8809013320072
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train-express/6
+Content-Type: application/json
+
+{
+  "number": 4,
+  "placeClass": "ReservedSeat",
+  "price": 1091.35200738624
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train-express/6
+Content-Type: application/json
+
+{
+  "number": 5,
+  "placeClass": "ReservedSeat",
+  "price": 3276.2230389966703
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train-express/6
+Content-Type: application/json
+
+{
+  "number": 6,
+  "placeClass": "ReservedSeat",
+  "price": 4505.172072720799
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train-express/6
+Content-Type: application/json
+
+{
+  "number": 7,
+  "placeClass": "ReservedSeat",
+  "price": 2350.4697262063096
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train-express/6
+Content-Type: application/json
+
+{
+  "number": 8,
+  "placeClass": "ReservedSeat",
+  "price": 1025.0015260393538
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train-express/6
+Content-Type: application/json
+
+{
+  "number": 9,
+  "placeClass": "ReservedSeat",
+  "price": 1492.4645014565701
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train-express/6
+Content-Type: application/json
+
+{
+  "number": 10,
+  "placeClass": "Compartment",
+  "price": 341.50978885378595
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train-express/6
+Content-Type: application/json
+
+{
+  "number": 11,
+  "placeClass": "ReservedSeat",
+  "price": 3838.500326563758
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train-express/6
+Content-Type: application/json
+
+{
+  "number": 12,
+  "placeClass": "Compartment",
+  "price": 376.8960439653458
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train-express/6
+Content-Type: application/json
+
+{
+  "number": 13,
+  "placeClass": "ReservedSeat",
+  "price": 3019.6900924430183
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+
+
+### Add place
+POST http://localhost:8080/api/place/insert/train-express/6
+Content-Type: application/json
+
+{
+  "number": 14,
+  "placeClass": "Compartment",
+  "price": 226.73064558243976
+}
+
+> {%
+  client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+

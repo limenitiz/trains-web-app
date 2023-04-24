@@ -1,0 +1,34 @@
+<!-- Example use:
+<footer th:replace="components/footer :: footer"></footer>
+-->
+
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="https://www.thymeleaf.org"
+      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3"
+      lang="ru">
+
+
+<footer th:fragment="footer" class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+  <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+    <symbol id="github" viewBox="0 0 1024 1024" fill="#000000">
+      <path d="M64 512c0 195.2 124.8 361.6 300.8 422.4 22.4 6.4 19.2-9.6 19.2-22.4v-76.8c-134.4 16-140.8-73.6-150.4-89.6-19.2-32-60.8-38.4-48-54.4 32-16 64 3.2 99.2 57.6 25.6 38.4 76.8 32 105.6 25.6 6.4-22.4 19.2-44.8 35.2-60.8-144-22.4-201.6-108.8-201.6-211.2 0-48 16-96 48-131.2-22.4-60.8 0-115.2 3.2-121.6 57.6-6.4 118.4 41.6 124.8 44.8 32-9.6 70.4-12.8 112-12.8 41.6 0 80 6.4 112 12.8 12.8-9.6 67.2-48 121.6-44.8 3.2 6.4 25.6 57.6 6.4 118.4 32 38.4 48 83.2 48 131.2 0 102.4-57.6 188.8-201.6 214.4 22.4 22.4 38.4 54.4 38.4 92.8v112c0 9.6 0 19.2 16 19.2C832 876.8 960 710.4 960 512c0-246.4-201.6-448-448-448S64 265.6 64 512z"/>
+    </symbol>
+    <symbol id="rails" viewBox="0 0 512 512" fill="#000000"> <g stroke-width="0"></g><g stroke-linecap="round" stroke-linejoin="round"></g>
+      <path d="M511.5,101.762l-11.253,16.879c0,0-28.133-31.879-79.694-26.257 c-51.574,5.626-142.517,58.136-156.585,173.461c-14.064,115.324,41.257,240.965,41.257,240.965H55.821 c0,0-6.562-41.256,9.377-120.014c15.936-78.76,39.377-131.265,79.694-206.276c40.317-75.007,105.011-136.89,198.773-145.324 C437.429,26.755,511.5,101.762,511.5,101.762z M6.126,381.17L0.5,428.053l45.943,5.623l8.442-48.756L6.126,381.17z M96.138,241.468 l-43.128-16.88l-14.064,39.376l44.068,14.064L96.138,241.468z M169.274,122.393l-32.819-21.566l-26.252,29.06l33.754,22.506 L169.274,122.393z M263.968,45.51l-22.502-25.317l-30.939,15.939l22.502,27.188L263.968,45.51z M364.297,31.446l-3.756-24.377 l-40.313-1.879l5.622,27.197L364.297,31.446z M481.496,56.759l-30.939-22.502l-0.939,16.875l26.253,14.064L481.496,56.759z M444.926,120.513l25.317,2.811v-11.249l-25.317-5.626V120.513z M364.297,118.642l12.184,22.498l17.815-14.064l-3.751-15 L364.297,118.642z M344.605,175.838l-18.755-28.128l-19.687,17.815l27.188,30L344.605,175.838z M276.16,249.901l31.876,27.196 l7.502-30.943l-27.188-20.626L276.16,249.901z M273.346,343.668l39.381,16.875l-1.871-30.939l-35.635-18.754L273.346,343.668z M345.537,463.684l-17.811-36.57h-41.253l9.378,33.758L345.537,463.684z"/>
+    </symbol>
+  </svg>
+
+  <div class="col-md-4 d-flex align-items-center">
+    <a href="/" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
+      <svg class="bi" width="30" height="24"><use xlink:href="#rails"></use></svg>
+    </a>
+    <span class="mb-3 mb-md-0 text-body-secondary">© 2023 Nikita Ivanov</span>
+  </div>
+
+  <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+    <!--    <li class="ms-3"><a class="text-body-secondary" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#rails"></use></svg></a></li>-->
+    <li class="ms-3"><a class="text-body-secondary" href="https://github.com/limenitiz"><svg class="bi" width="24" height="24"><use xlink:href="#github"></use></svg></a></li>
+  </ul>
+</footer>
+

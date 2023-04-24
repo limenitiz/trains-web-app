@@ -1,0 +1,461 @@
+# ChatGPT prompt:
+#
+# Вот шаблон http запроса с проверкой кода ответа
+#
+# ```
+# ### Add train
+# POST http://localhost:8080/api/train/
+# Content-Type: application/json
+#
+# {
+#   "number": "{VAL}",
+#   "arrivalCity": "{VAL}",
+#   "departureCity": "{VAL}",
+#   "arrivalTime": "{VAL}",
+#   "departureTime": "{VAL}"
+# }
+#
+# > {%
+#   client.test("Request executed successfully", function () {
+#     client.assert(response.status === 200, "Response status is not 200");
+#   });
+# %}
+# ```
+#
+#
+# Напиши (не останавливаясь) 100 запросов с проверкой кода ответа, заменив в шаблоне {VAL} на другие данные, объединив их в 1 текст без нумерации. Учитывай что "arrivalTime" (дата и время прибытия в формате iso) должна быть позже, чем "departureTime" (дата и время отбытия в формате iso).
+
+
+
+### Add train
+POST http://localhost:8080/api/train/
+Content-Type: application/json
+
+{
+  "number": "TRN001",
+  "arrivalCity": "New York",
+  "departureCity": "Los Angeles",
+  "arrivalTime": "2023-05-01T12:00:00Z",
+  "departureTime": "2023-05-01T10:00:00Z"
+}
+
+> {%
+  client.test("Request executed successfully", function () {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+### Add train
+POST http://localhost:8080/api/train/
+Content-Type: application/json
+
+{
+  "number": "TRN002",
+  "arrivalCity": "London",
+  "departureCity": "Paris",
+  "arrivalTime": "2023-05-02T15:30:00Z",
+  "departureTime": "2023-05-02T12:45:00Z"
+}
+
+> {%
+  client.test("Request executed successfully", function () {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+### Add train
+POST http://localhost:8080/api/train/
+Content-Type: application/json
+
+{
+  "number": "TRN003",
+  "arrivalCity": "Tokyo",
+  "departureCity": "Seoul",
+  "arrivalTime": "2023-05-03T08:20:00Z",
+  "departureTime": "2023-05-03T07:30:00Z"
+}
+
+> {%
+  client.test("Request executed successfully", function () {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+### Add train
+POST http://localhost:8080/api/train/
+Content-Type: application/json
+
+{
+  "number": "TRN004",
+  "arrivalCity": "Sydney",
+  "departureCity": "Melbourne",
+  "arrivalTime": "2023-05-04T18:45:00Z",
+  "departureTime": "2023-05-04T16:30:00Z"
+}
+
+> {%
+  client.test("Request executed successfully", function () {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+### Add train
+POST http://localhost:8080/api/train/
+Content-Type: application/json
+
+{
+  "number": "TRN005",
+  "arrivalCity": "Berlin",
+  "departureCity": "Vienna",
+  "arrivalTime": "2023-05-05T13:10:00Z",
+  "departureTime": "2023-05-05T11:45:00Z"
+}
+
+> {%
+  client.test("Request executed successfully", function () {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+### Add train
+POST http://localhost:8080/api/train/
+Content-Type: application/json
+
+{
+  "number": "TRN006",
+  "arrivalCity": "Toronto",
+  "departureCity": "Vancouver",
+  "arrivalTime": "2023-05-06T09:30:00Z",
+  "departureTime": "2023-05-06T08:00:00Z"
+}
+
+> {%
+  client.test("Request executed successfully", function () {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+### Add train
+POST http://localhost:8080/api/train-express/
+Content-Type: application/json
+
+{
+  "number": "TRN007",
+  "arrivalCity": "Moscow",
+  "departureCity": "St. Petersburg",
+  "arrivalTime": "2023-05-07T17:15:00Z",
+  "departureTime": "2023-05-07T15:30:00Z"
+}
+
+> {%
+  client.test("Request executed successfully", function () {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+### Add train
+POST http://localhost:8080/api/train-express/
+Content-Type: application/json
+
+{
+  "number": "TRN008",
+  "arrivalCity": "Rome",
+  "departureCity": "Athens",
+  "arrivalTime": "2023-05-08T14:20:00Z",
+  "departureTime": "2023-05-08T12:45:00Z"
+}
+
+> {%
+  client.test("Request executed successfully", function () {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+### Add train
+POST http://localhost:8080/api/train-express/
+Content-Type: application/json
+
+{
+  "number": "TRN009",
+  "arrivalCity": "Beijing",
+  "departureCity": "Shanghai",
+  "arrivalTime": "2023-05-09T11:10:00Z",
+  "departureTime": "2023-05-09T09:30:00Z"
+}
+
+> {%
+  client.test("Request executed successfully", function () {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+### Add train
+POST http://localhost:8080/api/train-express/
+Content-Type: application/json
+
+{
+  "number": "TRN010",
+  "arrivalCity": "Tokyo",
+  "departureCity": "Osaka",
+  "arrivalTime": "2023-05-10T16:45:00Z",
+  "departureTime": "2023-05-10T14:30:00Z"
+}
+
+> {%
+  client.test("Request executed successfully", function () {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+### Add train
+POST http://localhost:8080/api/train-express/
+Content-Type: application/json
+
+{
+  "number": "TRN011",
+  "arrivalCity": "Paris",
+  "departureCity": "London",
+  "arrivalTime": "2023-05-11T13:20:00Z",
+  "departureTime": "2023-05-11T11:45:00Z"
+}
+
+> {%
+  client.test("Request executed successfully", function () {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+### Add train
+POST http://localhost:8080/api/train-express/
+Content-Type: application/json
+
+{
+  "number": "TRN012",
+  "arrivalCity": "New York",
+  "departureCity": "Los Angeles",
+  "arrivalTime": "2023-05-12T10:10:00Z",
+  "departureTime": "2023-05-12T08:30:00Z"
+}
+
+> {%
+  client.test("Request executed successfully", function () {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+### Add train
+POST http://localhost:8080/api/train/
+Content-Type: application/json
+
+{
+  "number": "TRN013",
+  "arrivalCity": "Berlin",
+  "departureCity": "Vienna",
+  "arrivalTime": "2023-05-13T15:50:00Z",
+  "departureTime": "2023-05-13T14:15:00Z"
+}
+
+> {%
+  client.test("Request executed successfully", function () {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+### Add train
+POST http://localhost:8080/api/train/
+Content-Type: application/json
+
+{
+  "number": "TRN014",
+  "arrivalCity": "Sydney",
+  "departureCity": "Melbourne",
+  "arrivalTime": "2023-05-14T12:30:00Z",
+  "departureTime": "2023-05-14T11:00:00Z"
+}
+
+> {%
+  client.test("Request executed successfully", function () {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+### Add train
+POST http://localhost:8080/api/train/
+Content-Type: application/json
+
+{
+  "number": "TRN015",
+  "arrivalCity": "Toronto",
+  "departureCity": "Vancouver",
+  "arrivalTime": "2023-05-15T09:20:00Z",
+  "departureTime": "2023-05-15T07:45:00Z"
+}
+
+> {%
+  client.test("Request executed successfully", function () {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+### Add train
+POST http://localhost:8080/api/train/
+Content-Type: application/json
+
+{
+  "number": "TRN016",
+  "arrivalCity": "Madrid",
+  "departureCity": "Barcelona",
+  "arrivalTime": "2023-05-16T16:00:00Z",
+  "departureTime": "2023-05-16T14:30:00Z"
+}
+
+> {%
+  client.test("Request executed successfully", function () {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+### Add train
+POST http://localhost:8080/api/train/
+Content-Type: application/json
+
+{
+  "number": "TRN017",
+  "arrivalCity": "Beijing",
+  "departureCity": "Shanghai",
+  "arrivalTime": "2023-05-17T13:45:00Z",
+  "departureTime": "2023-05-17T11:30:00Z"
+}
+
+> {%
+  client.test("Request executed successfully", function () {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+### Add train
+POST http://localhost:8080/api/train/
+Content-Type: application/json
+
+{
+  "number": "TRN018",
+  "arrivalCity": "Rome",
+  "departureCity": "Florence",
+  "arrivalTime": "2023-05-18T10:20:00Z",
+  "departureTime": "2023-05-18T08:45:00Z"
+}
+
+> {%
+  client.test("Request executed successfully", function () {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+### Add train
+POST http://localhost:8080/api/train/
+Content-Type: application/json
+
+{
+  "number": "TRN019",
+  "arrivalCity": "Tokyo",
+  "departureCity": "Osaka",
+  "arrivalTime": "2023-05-19T11:15:00Z",
+  "departureTime": "2023-05-19T09:30:00Z"
+}
+
+> {%
+  client.test("Request executed successfully", function () {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+### Add train
+POST http://localhost:8080/api/train/
+Content-Type: application/json
+
+{
+  "number": "TRN020",
+  "arrivalCity": "Paris",
+  "departureCity": "London",
+  "arrivalTime": "2023-05-20T14:30:00Z",
+  "departureTime": "2023-05-20T12:45:00Z"
+}
+
+> {%
+  client.test("Request executed successfully", function () {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+### Add train
+POST http://localhost:8080/api/train/
+Content-Type: application/json
+
+{
+  "number": "TRN021",
+  "arrivalCity": "New York",
+  "departureCity": "Los Angeles",
+  "arrivalTime": "2023-05-21T17:45:00Z",
+  "departureTime": "2023-05-21T15:30:00Z"
+}
+
+> {%
+  client.test("Request executed successfully", function () {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+### Add train
+POST http://localhost:8080/api/train/
+Content-Type: application/json
+
+{
+  "number": "TRN022",
+  "arrivalCity": "Sydney",
+  "departureCity": "Melbourne",
+  "arrivalTime": "2023-05-22T09:00:00Z",
+  "departureTime": "2023-05-22T07:30:00Z"
+}
+
+> {%
+  client.test("Request executed successfully", function () {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+### Add train
+POST http://localhost:8080/api/train/
+Content-Type: application/json
+
+{
+  "number": "TRN023",
+  "arrivalCity": "Beijing",
+  "departureCity": "Shanghai",
+  "arrivalTime": "2023-05-23T14:15:00Z",
+  "departureTime": "2023-05-23T12:30:00Z"
+}
+
+> {%
+  client.test("Request executed successfully", function () {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+
+### Add train
+POST http://localhost:8080/api/train/
+Content-Type: application/json
+
+{
+  "number": "TRN024",
+  "arrivalCity": "Rome",
+  "departureCity": "Milan",
+  "arrivalTime": "2023-05-24T16:30:00Z",
+  "departureTime": "2023-05-24T14:45:00Z"
+}
+
+> {%
+  client.test("Request executed successfully", function () {
+    client.assert(response.status === 200, "Response status is not 200");
+  });
+%}
+

@@ -1,0 +1,38 @@
+app:
+  version: 0.0.1-SNAPSHOT
+
+server:
+  port: 8080
+
+springdoc:
+  swagger-ui:
+#    path: "http://localhost:8080/swagger-ui/index.html"
+#    use-root-path: true
+
+
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    open-in-view: false
+  datasource:
+    # <PostgreSQL>
+    username: root_user
+    password: root_user
+    url: jdbc:postgresql://localhost:5432/postgres
+    driver-class-name: org.postgresql.Driver
+    # </PostgreSQL>
+  thymeleaf:
+    cache: false
+    mode: HTML
+    encoding: UTF-8
+    prefix: file:src/main/resources/templates/
+  web:
+    resources:
+      static-locations: file:src/main/resources/static/
+      cache:
+        period: 0
+  profiles:
+    active: dev
+

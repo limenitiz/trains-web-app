@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="https://www.thymeleaf.org"
+      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3"
+      lang="ru">
+
+<head>
+    <title>Registration</title>
+    <meta th:replace="fragment/head::head-template">
+</head>
+
+
+<body>
+
+<header th:replace="fragment/header::header"></header>
+
+<div class="display">
+    <div class="content-center">
+        <!--/*@thymesVar id="registrationDto" type="com.example.app.dto.social.RegistrationDto"*/-->
+        <form class="cloud-blue p-5" action="#" id="user-data"
+              th:action="@{/registration}"
+              th:object="${registrationDto}" method="post">
+            <div class="d-flex justify-content-center align-items-center">
+                <div th:if="${#fields.hasErrors('*')}">
+                    <p class="form-text-error"
+                       th:each="err : ${#fields.errors('*')}"
+                       th:text="${err}"></p>
+                </div>
+                <div th:if='${registrationStatus.equals("ok")}'>
+                    <p th:text="#{registration.successful-registration}"
+                       class="form-text-successful"></p>
+                </div>
+            </div>
+            <div class="form-field">
+                <span class="form-field-requirement">*</span>
+                <input type="text" class="w-220px"
+                       th:field="*{userDto.username}"
+                       th:placeholder="#{registration.username}"
+                       th:errorclass="form-field-invalid">
+            </div>
+            <div class="form-field">
+                <span class="form-field-requirement">&nbsp;</span>
+                <input type="text" class="w-220px"
+                       th:field="*{profileDto.firstName}"
+                       th:placeholder="#{registration.first-name}"
+                       th:errorclass="form-field-invalid">
+            </div>
+            <div class="form-field">
+                <span class="form-field-requirement">&nbsp;</span>
+                <input type="text" class="w-220px"
+                       th:field="*{profileDto.lastName}"
+                       th:placeholder="#{registration.last-name}"
+                       th:errorclass="form-field-invalid">
+            </div>
+            <div class="form-field">
+                <span class="form-field-requirement">&nbsp;</span>
+                <input type="email" class="w-220px"
+                       th:field="*{profileDto.email}"
+                       th:placeholder="#{registration.email}"
+                       th:errorclass="form-field-invalid">
+            </div>
+            <div class="form-field">
+                <span class="form-field-requirement">*</span>
+                <input type="password" class="w-220px"
+                       th:field="*{userDto.password}"
+                       th:placeholder="#{registration.password}"
+                       th:errorclass="form-field-invalid">
+            </div>
+            <div class="form-field">
+                <span class="form-field-requirement">*</span>
+                <input type="password" class="w-220px"
+                       th:field="*{userDto.matchingPassword}"
+                       th:placeholder="#{registration.retype-password}"
+                       th:errorclass="form-field-invalid">
+            </div>
+            <div class="form-field">
+                <button class="form-submit-button w-220px"
+                        th:text="#{registration.submit}">
+                </button>
+            </div>
+
+        </form>
+    </div>
+</div>
+
+<footer th:replace="fragment/footer::footer"></footer>
+
+</body>
+</html>

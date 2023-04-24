@@ -1,0 +1,27 @@
+<!-- Example use:
+<header th:replace="components/header :: header"></header>
+-->
+
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="https://www.thymeleaf.org"
+      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3"
+      lang="ru">
+
+
+<header th:fragment="header" class="p-3 mb-3 border-bottom">
+  <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+    <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 link-body-emphasis text-decoration-none">
+      <svg class="bi me-2" width="40" height="32" role="img" aria-label="Rails"><use xlink:href="#rails"></use></svg>
+    </a>
+
+    <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+      <li><a href="/home" class="nav-link px-2 link-secondary">Home</a></li>
+      <li><a href="/schedule" class="nav-link px-2 link-body-emphasis">Schedule</a></li>
+      <li><a href="/swagger-ui/index.html" class="nav-link px-2 link-body-emphasis">API</a></li>
+    </ul>
+  </div>
+</header>
+
+
+</html>
