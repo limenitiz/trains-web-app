@@ -24,10 +24,10 @@ public class TrainEntity
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String number;
-    private String arrivalCity;
     private String departureCity;
-    private LocalDateTime arrivalTime;
+    private String arrivalCity;
     private LocalDateTime departureTime;
+    private LocalDateTime arrivalTime;
 
     @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL, mappedBy = "train")
     private final List<PlaceEntity> places = new ArrayList<>();
