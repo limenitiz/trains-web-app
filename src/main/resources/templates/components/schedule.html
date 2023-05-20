@@ -11,7 +11,8 @@
 
 <body>
 
-<div th:fragment="tabs" class="w-100">
+
+<div th:fragment="schedule-content" class="w-100">
 
   <svg xmlns="http://www.w3.org/2000/svg" style="display: none;" >
     <symbol id="svg-train" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#000099" class="bi bi-truck-front" viewBox="0 0 16 16">
@@ -24,246 +25,138 @@
     </symbol>
   </svg>
 
-  <ul class="nav nav-tabs" id="myTab" role="tablist">
-    <li class="nav-item" role="presentation">
-      <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">
-        <svg class="bi me-2" width="40" height="32" role="img" aria-label="Rails"><use xlink:href="#svg-train"></use></svg>
-        Trains</button>
-    </li>
-    <li class="nav-item" role="presentation">
-      <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">
-        <svg class="bi me-2" width="40" height="32" role="img" aria-label="Rails"><use xlink:href="#svg-train-express"></use></svg>
-        Express Trains</button>
-    </li>
-  </ul>
-  <div class="tab-content" id="myTabContent">
-    <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
-      <div th:replace="components/schedule::trains-tab"></div></div>
-    <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
-      <div th:replace="components/schedule::trains-express-tab"></div></div>
+  <div class="d-flex flex-column justify-content-center align-items-center">
+    <div class="d-flex flex-column list-group list-group-horizontal" th:replace="components/schedule::trains-search"></div>
+    <div class="d-flex flex-column list-group list-group-horizontal" th:replace="components/schedule::divider"></div>
+    <div class="d-flex flex-column list-group list-group-horizontal" th:replace="components/schedule::trains-list"></div>
   </div>
 
 </div>
 
+<!--/*@thymesVar id="trainExample" type="limenitiz.study.app.model.TrainExample"*/-->
+<div th:fragment="trains-search">
+  <form class="row"
+        th:action="@{/schedule}"
+        th:object="${trainExample}"
+        th:method="post">
+    <div class="col-auto p-1" style="width: 170px; height: 35px">
+      <label for="inputCityFrom" class="visually-hidden">City from</label>
+      <input th:field="*{departureCity}" type="text" class="form-control p-2" id="inputCityFrom" placeholder="City from">
+    </div>
+    <div class="col-auto p-1" style="width: 170px; height: 35px">
+      <label for="inputCityTo" class="visually-hidden">City To</label>
+      <input th:field="*{arrivalCity}" type="text" class="form-control p-2" id="inputCityTo" placeholder="City To">
+    </div>
+    <div class="col-auto p-1" style="width: 170px; height: 35px">
+      <label for="inputTimeFrom" class="visually-hidden">Time from</label>
+      <input th:field="*{arrivalTime}" th:type="LocalDateTime" type="datetime-local" class="form-control p-2" id="inputTimeFrom" placeholder="Time from">
+    </div>
+    <div class="col-auto p-1" style="width: 170px; height: 35px">
+      <label for="inputTimeTo" class="visually-hidden">Time To</label>
+      <input th:field="*{departureTime}" th:type="LocalDateTime" type="datetime-local" class="form-control p-2" id="inputTimeTo" placeholder="Time To">
+    </div>
 
-<div th:fragment="trains-tab">
-  <table class="table table-striped table-hover table-bordered">
-    <thead th:replace="components/schedule::trains-thead"></thead>
-    <tbody>
-    <!--/*@thymesVar id="train" type="limenitiz.study.app.model.Train"*/-->
-      <tr th:each="train: ${trains}">
-        <td th:replace="components/schedule::trains-tbody-tr"></td>
-      </tr>
-    </tbody>
-    <tfoot th:replace="components/schedule::trains-tfoot"></tfoot>
-  </table>
+    <div class="col-auto p-1" style="width: 170px; height: 35px">
+      <button type="submit" class="btn border border-success bg-success-subtle p-2 mb-3">Search</button>
+    </div>
+  </form>
+</div>
+
+<div th:fragment="trains-list">
+  <ul class="list-group w-100">
+    <!--/*@thymesVar id="train" type="limenitiz.study.app.model.AbstractTrain"*/-->
+    <li class="list-group-item" th:each="train: ${trains}">
+      <div th:if="${train.class.name == 'limenitiz.study.app.model.Train'}">
+        <ul th:replace="components/schedule::train-card"></ul>
+      </div>
+      <div th:if="${train.class.name == 'limenitiz.study.app.model.TrainExpress'}">
+        <ul th:replace="components/schedule::train-card"></ul>
+      </div>
+    </li>
+  </ul>
 </div>
 
 
-<div th:fragment="trains-express-tab">
-  <table class="table table-striped table-hover table-bordered">
-    <thead th:replace="components/schedule::trains-thead"></thead>
-    <tbody>
-    <!--/*@thymesVar id="train" type="limenitiz.study.app.model.TrainExpress"*/-->
-    <tr th:each="train: ${trainsExpress}">
-      <td th:replace="components/schedule::trains-tbody-tr"></td>
-    </tr>
-    </tbody>
-    <tfoot th:replace="components/schedule::trains-tfoot"></tfoot>
-  </table>
-</div>
 
-
-<table>
-  <thead th:fragment="trains-thead">
-  <tr>
-    <th class="text-center" scope="col">Number</th>
-    <th class="text-center" scope="col" colspan="2">Departure</th>
-    <th class="text-center" scope="col" colspan="2">Arrival</th>
-    <th class="text-center" scope="col">Places</th>
-    <th class="text-center" scope="col">Price</th>
-  </tr>
-  <tr>
-    <th class="text-center" scope="col"></th>
-    <th class="text-center" scope="col">City</th>
-    <th class="text-center" scope="col">Time</th>
-    <th class="text-center" scope="col">City</th>
-    <th class="text-center" scope="col">Time</th>
-    <th class="text-center" scope="col"></th>
-    <th class="text-center" scope="col"></th>
-    <th class="text-center" scope="col"></th>
-  </tr>
-  </thead>
-  <tbody>
-    <tr th:fragment="trains-tbody-tr">
-      <!--/*@thymesVar id="train" type="limenitiz.study.app.model.Train"*/-->
-      <td th:text="${train.id}" hidden="hidden"/>
-      <td>
-        <span class="" th:text="${train.number}"/>
-      </td>
-      <td>
-        <span class="" th:text="${train.departureCity}"/>
-      </td>
-      <td>
-        <span class="" th:text="${train.getDepartureTime()}"/>
-      </td>
-      <td>
-        <span class="" th:text="${train.arrivalCity}"/>
-      </td>
-      <td>
-        <span class="" th:text="${train.getArrivalTime()}"/>
-      </td>
-      <td>
-        <span class="" th:text="${train.availablePlacesCount() + '/' + train.placesCount()}"/>
-      </td>
-      <td>
-        <span class="" th:text="${train.minPlacePrice() + ' ~ ' + train.maxPlacePrice()}"/>
-      </td>
-      <td>
-        <button class="btn badge bg-secondary" data-bs-toggle="collapse" th:href="${'#trains-collapse' + train.id}" role="button" aria-expanded="false" th:aria-controls="${'trains-collapse' + train.id}">
-          ▼
-        </button>
-      </td>
-    </tr>
-    <tr th:fragment="trains-tbody-tr">
-      <td colspan="8">
-        <div class="collapse" th:id="${'trains-collapse' + train.id}">
-          <div class="card card-body">
-            <div th:replace="components/schedule::places-content"></div>
-          </div>
+<ul th:fragment="train-card" class="list-group">
+  <!--/*@thymesVar id="train" type="limenitiz.study.app.model.Train"*/-->
+  <li class="list-group-item">
+    <div id="main-row" class="row">
+      <div id="train-info" class="col">
+        <div id="train-summary" class="container text-start text-">
+          <span th:text="${train.getNumber()}"></span>
         </div>
-      </td>
-    </tr>
-  </tbody>
-  <tfoot th:fragment="trains-tfoot">
-  <tr><td>
-    <!-- add train-->
-    <span class="badge text-bg-success">
-      <span type="button" class="btn badge"> + </span>
-    </span>
-  </td></tr>
-  </tfoot>
-</table>
-
-
-<div th:fragment="places-content">
-  <table class="table table-striped table-hover table-bordered">
-    <thead th:replace="components/schedule::places-thead"></thead>
-    <tbody>
-    <!--/*@thymesVar id="train" type="limenitiz.study.app.model.Train"*/-->
-    <!--/*@thymesVar id="place" type="limenitiz.study.app.model.Place"*/-->
-    <tr th:each="place: ${train.getPlaces()}">
-      <td th:replace="components/schedule::places-tbody-tr"></td>
-    </tr>
-    </tbody>
-    <tfoot th:replace="components/schedule::places-tfoot"></tfoot>
-  </table>
-</div>
-
-
-<table>
-  <thead th:fragment="places-thead">
-  <tr>
-    <th class="text-center" scope="col">Number</th>
-    <th class="text-center" scope="col">Class</th>
-    <th class="text-center" scope="col">Price</th>
-    <th class="text-center" scope="col">Passenger</th>
-  </tr>
-  </thead>
-  <tbody>
-  <tr th:fragment="places-tbody-tr">
-    <!--/*@thymesVar id="place" type="limenitiz.study.app.model.Place"*/-->
-    <td th:text="${place.id}" hidden="hidden"/>
-    <td>
-      <span class="" th:text="${place.number}"/>
-    </td>
-    <td>
-      <span class="" th:text="${place.placeClass.getVal()}"/>
-    </td>
-    <td>
-      <span class="" th:text="${place.getPriceStr()}"/>
-    </td>
-    <td th:switch="${place.getFullName()}">
-      <span th:case="''" class="">
-      </span>
-      <span th:case="*" class="" th:text="${place.getFullName()}"/>
-    </td>
-    <td>
-      <button class="btn badge bg-secondary" data-bs-toggle="collapse" th:href="${'#places-collapse' + place.id}" role="button" aria-expanded="false" th:aria-controls="${'places-collapse' + place.id}">
-        ▼
-      </button>
-    </td>
-  </tr>
-  <tr th:fragment="places-tbody-tr">
-    <td colspan="8">
-      <!--/*@thymesVar id="place" type="limenitiz.study.app.model.Place"*/-->
-      <div class="collapse" th:id="${'places-collapse' + place.id}">
-        <div th:switch="${place.getFullName()}" class="card card-body">
-          <div th:case="''">
-            <div type="button" class="btn badge bg-success"> + </div>
+        <div id="train-info-row" class="row">
+          <div id="train-departure-info" class="col-auto">
+            <ul class="list-group list-group-horizontal">
+              <li class="list-group-item">
+                <span th:text="${train.getDepartureTime()}">Dep. time</span>
+              </li>
+              <li class="list-group-item">
+                <span th:text="${train.getDepartureCity()}">Dep. city</span>
+              </li>
+            </ul>
           </div>
-          <div th:case="*">
-            <div th:replace="components/schedule::passenger-content"></div>
+          <div id="train-arrival-info" class="col-auto">
+            <ul class="list-group list-group-horizontal">
+              <li class="list-group-item p-sm-1"><span
+                      th:text="${train.getArrivalTime()}">Ariv. time</span></li>
+              <li class="list-group-item p-sm-1"><span
+                      th:text="${train.getArrivalCity()}">Ariv. city</span></li>
+            </ul>
           </div>
         </div>
       </div>
-    </td>
-  </tr>
-  </tbody>
-  <tfoot th:fragment="places-tfoot">
-  <tr><td>
-    <!-- add place-->
-    <span class="badge text-bg-success">
-      <span type="button" class="btn badge"> + </span>
-    </span>
-  </td></tr>
-  </tfoot>
-</table>
+      <div id="places-info" class="col">
+        <div class="row">
+          <div id="place-reserved_seat-name" class="col-auto">
+            <span>Reserved seat</span>
+          </div>
+          <div id="place-reserved_seat-count" class="col-auto">
+            <span th:text="${train.availablePlacesCount(0) + '/' + train.placesCount(0)}">count</span>
+          </div>
+          <div id="place-reserved_seat-min-price" class="col-auto text-danger">
+            <span th:text="${'from ' + train.minPlacePrice(0)}"></span>
+          </div>
+        </div>
+        <div class="row">
+          <div id="place-compartment-name" class="col-auto">
+            <span>Compartment</span>
+          </div>
+          <div id="place-compartment-count" class="col-auto">
+            <span th:text="${train.availablePlacesCount(1) + '/' + train.placesCount(1)}">count</span>
+          </div>
+          <div id="place-compartment-min-price" class="col-auto text-danger">
+            <!--                    bg-dark-subtle rounded-3-->
+            <span th:text="${'from ' + train.minPlacePrice(1)}">tt</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </li>
+</ul>
 
 
-<div th:fragment="passenger-content">
-  <table class="table table-striped table-hover table-bordered">
-    <thead th:replace="components/schedule::passenger-thead"></thead>
-    <tbody>
-    <!--/*@thymesVar id="place" type="limenitiz.study.app.model.Place"*/-->
-    <!--/*@thymesVar id="passenger" type="limenitiz.study.app.model.Passenger"*/-->
-    <tr th:each="passenger: ${place.getPassenger()}">
-      <td th:replace="components/schedule::passenger-tbody-tr"></td>
-    </tr>
-    </tbody>
-    <tfoot th:replace="components/schedule::passenger-tfoot"></tfoot>
-  </table>
-</div>
 
 
-<table>
-  <thead th:fragment="passenger-thead">
-  <tr>
-    <th class="text-center" scope="col">FirstName</th>
-    <th class="text-center" scope="col">SecondName</th>
-    <th class="text-center" scope="col">Gender</th>
-  </tr>
-  </thead>
-  <tbody>
-  <tr th:fragment="passenger-tbody-tr">
-    <!--/*@thymesVar id="passenger" type="limenitiz.study.app.model.Passenger"*/-->
-    <td th:text="${passenger.id}" hidden="hidden"/>
-    <td>
-      <span class="" th:text="${passenger.firstName}"/>
-    </td>
-    <td>
-      <span class="" th:text="${passenger.secondName}"/>
-    </td>
-    <td>
-      <span class="" th:text="${passenger.gender}"/>
-    </td>
-  </tr>
-  </tbody>
-  <tfoot th:fragment="passenger-tfoot">
-  <tr><td>
-  </td></tr>
-  </tfoot>
-</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div th:fragment="divider" class="border rounded-3 m-5" style="height: 4px; width: 75%; background-color: lightgray;"></div>
 
 
 </body>
