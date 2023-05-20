@@ -1,23 +1,31 @@
 package limenitiz.study.app;
 
 import limenitiz.study.app.model.*;
+import limenitiz.study.app.service.PassengerService;
 import limenitiz.study.app.service.PlaceService;
+import limenitiz.study.app.service.TrainExpressService;
 import limenitiz.study.app.service.TrainService;
 import limenitiz.study.templates.exception.NotFoundException;
+import org.junit.jupiter.api.MethodOrderer;
+import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.TestMethodOrder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import java.time.LocalDateTime;
 import java.time.temporal.ChronoUnit;
+import java.util.LinkedList;
 import java.util.Random;
 
 @SpringBootTest(classes = Application.class)
+@TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 public class AllTests {
     private static final Random r = new Random();
 
     private static class TestData {
-        private static String[] maleUniqueNames = {
+
+        private static final String[] maleUniqueNames = {
                 "James", "John", "Robert", "Michael", "William", "David", "Joseph", "Charles", "Thomas", "Daniel",
                 "Matthew", "Anthony", "Donald", "Mark", "Paul", "Steven", "Andrew", "Kenneth", "George", "Joshua",
                 "Kevin", "Brian", "Edward", "Ronald", "Timothy", "Jason", "Jeffrey", "Frank", "Gary", "Stephen",
@@ -30,7 +38,7 @@ public class AllTests {
                 "Travis", "Danny", "Christian", "Carl", "Sam", "Curtis", "Sean", "Marvin", "Manuel", "Derek"
         };
 
-        private static String[] femaleUniqueNames = {
+        private static final String[] femaleUniqueNames = {
                 "Mary", "Jennifer", "Linda", "Patricia", "Elizabeth", "Susan", "Jessica", "Sarah", "Karen", "Nancy",
                 "Lisa", "Margaret", "Betty", "Dorothy", "Sandra", "Ashley", "Kimberly", "Donna", "Emily", "Carol",
                 "Michelle", "Amanda", "Melissa", "Deborah", "Stephanie", "Rebecca", "Laura", "Sharon", "Cynthia", "Kathleen",
@@ -43,7 +51,7 @@ public class AllTests {
                 "Marilyn", "Valerie", "Diana", "Shannon", "Donna", "Rita", "Marie", "Wendy", "Beverly", "Alice"
         };
 
-        private static String[] maleUniqueSurnames = {
+        private static final String[] maleUniqueSurnames = {
                 "Smith", "Johnson", "Williams", "Jones", "Brown", "Davis", "Miller", "Wilson", "Moore", "Taylor",
                 "Anderson", "Thomas", "Jackson", "White", "Harris", "Martin", "Thompson", "Garcia", "Martinez", "Robinson",
                 "Clark", "Rodriguez", "Lewis", "Lee", "Walker", "Hall", "Allen", "Young", "Hernandez", "King",
@@ -56,7 +64,7 @@ public class AllTests {
                 "Simmons", "Foster", "Gonzales", "Bryant", "Alexander", "Russell", "Griffin", "Diaz", "Hayes", "Myers"
         };
 
-        private static String[] femaleUniqueSurnames = {
+        private static final String[] femaleUniqueSurnames = {
                 "Smith", "Johnson", "Williams", "Jones", "Brown", "Davis", "Miller", "Wilson", "Moore", "Taylor",
                 "Anderson", "Thomas", "Jackson", "White", "Harris", "Martin", "Thompson", "Garcia", "Martinez", "Robinson",
                 "Clark", "Rodriguez", "Lewis", "Lee", "Walker", "Hall", "Allen", "Young", "Hernandez", "King",
@@ -69,7 +77,15 @@ public class AllTests {
                 "Simmons", "Foster", "Gonzales", "Bryant", "Alexander", "Russell", "Griffin", "Diaz", "Hayes", "Myers"
         };
 
-        private static String[] arrivalCities = {
+        private static final String[][] uniqueNames = {
+                maleUniqueNames, femaleUniqueNames
+        };
+
+        private static final String[][] uniqueSurnames = {
+                maleUniqueSurnames, femaleUniqueSurnames
+        };
+
+        private static final String[] arrivalCities = {
                 "London", "New York", "Paris", "Tokyo", "Los Angeles", "Berlin", "Rome", "Sydney", "Toronto", "Madrid",
                 "Moscow", "Amsterdam", "Vienna", "Beijing", "Dubai", "Stockholm", "Mumbai", "Barcelona", "Singapore", "San Francisco",
                 "Cairo", "Istanbul", "Buenos Aires", "Seoul", "Prague", "Athens", "Copenhagen", "Helsinki", "Bangkok", "Lisbon",
@@ -77,16 +93,16 @@ public class AllTests {
                 "Vancouver", "Edinburgh", "Auckland", "Havana", "Nairobi", "Reykjavik", "Delhi", "Helsinki", "Manila", "Montreal"
         };
 
-        private static String[] departureCities = {
+        private static final String[] departureCities = {
                 "Cape Town", "Rio de Janeiro", "Marrakech", "Seville", "Kyoto", "Florence", "Venice", "Lima", "Munich", "Ottawa",
                 "Wellington", "Jerusalem", "Krakow", "St. Petersburg", "Stockholm", "Hamburg", "Nice", "Cologne", "Prague", "Vienna",
                 "Dublin", "Brisbane", "Copenhagen", "Sofia", "Bucharest", "Glasgow", "Belgrade", "Ljubljana", "Tallinn", "Helsinki",
                 "Zagreb", "Oslo", "Skopje", "Vilnius", "Warsaw", "Budapest", "Reykjavik", "Luxembourg City", "Valletta", "Bratislava"
         };
 
-        public static final PassengerGender[] genders = new PassengerGender[] { PassengerGender.Male, PassengerGender.Female };
+        public static final PassengerGender[] genders = new PassengerGender[]{PassengerGender.Male, PassengerGender.Female};
 
-        public static final PlaceClass[] classes = new PlaceClass[] { PlaceClass.ReservedSeat, PlaceClass.Compartment };
+        public static final PlaceClass[] classes = new PlaceClass[]{PlaceClass.ReservedSeat, PlaceClass.Compartment};
 
     }
 
@@ -94,10 +110,17 @@ public class AllTests {
         return objects[r.nextInt(0, objects.length)];
     }
 
-    @Autowired private TrainService trainService;
-    @Autowired private PlaceService placeService;
+    @Autowired
+    private TrainService trainService;
+    @Autowired
+    private TrainExpressService trainExpressService;
+    @Autowired
+    private PlaceService placeService;
+    @Autowired
+    private PassengerService passengerService;
 
     @Test
+    @Order(1)
     void givenTrain_thenSaveIntoDB() {
         for (int train_id = 1; train_id < 19; train_id++) {
             var departureTime = LocalDateTime.now()
@@ -121,24 +144,89 @@ public class AllTests {
     }
 
     @Test
+    @Order(2)
+    void givenExpressTrain_thenSaveIntoDB() {
+        for (int train_id = 1; train_id < 19; train_id++) {
+            var departureTime = LocalDateTime.now()
+                    .plus(r.nextInt(6), ChronoUnit.WEEKS)
+                    .plus(r.nextInt(7), ChronoUnit.DAYS)
+                    .plus(r.nextInt(24), ChronoUnit.HOURS)
+                    .plus(r.nextInt(60), ChronoUnit.MINUTES);
+
+            var arrivalTime = departureTime
+                    .plus(r.nextInt(12), ChronoUnit.HOURS)
+                    .plus(r.nextInt(60), ChronoUnit.MINUTES);
+
+            trainExpressService.add(TrainExpress.builder()
+                    .number(String.format("TRNE%03d", train_id))
+                    .departureCity(randChoice(TestData.departureCities))
+                    .arrivalCity(randChoice(TestData.arrivalCities))
+                    .departureTime(departureTime)
+                    .arrivalTime(arrivalTime)
+                    .build());
+        }
+    }
+
+    @Test
+    @Order(3)
     void givenPlace_thenSaveIntoDB() throws NotFoundException {
-        for (long train_id = 1; train_id < 19; train_id++) {
-            for (int place_id = 1; place_id < 38; place_id++) {
-                var train = trainService.findById(train_id);
-                train.getPlaces().add(Place.builder()
-                        .build());
+        for (var train : trainService.getAll()) {
+            for (int place_id = 1; place_id < 38 * r.nextInt(6); place_id++) {
+                var placeClass = randChoice(TestData.classes);
+                var priceCoefficient = switch (placeClass) {
+                    case Compartment -> 1;
+                    case ReservedSeat -> 10;
+                };
+                var place = Place.builder()
+                        .number(place_id)
+                        .placeClass(placeClass)
+                        .price(
+                                r.nextDouble(
+                                        100 * priceCoefficient,
+                                        500 * priceCoefficient)
+                        )
+                        .build();
+                placeService.insertIntoTrain(place, train.getId());
+            }
+        }
+
+        for (var train : trainExpressService.getAll()) {
+            for (int place_id = 1; place_id < 38 * r.nextInt(3); place_id++) {
+                var placeClass = randChoice(TestData.classes);
+                var priceCoefficient = switch (placeClass) {
+                    case Compartment -> 1;
+                    case ReservedSeat -> 10;
+                };
+                var place = Place.builder()
+                        .number(place_id)
+                        .placeClass(placeClass)
+                        .price(
+                                r.nextDouble(
+                                        100 * priceCoefficient,
+                                        500 * priceCoefficient)
+                        )
+                        .build();
+                placeService.insertIntoTrainExpress(place, train.getId());
             }
         }
     }
 
     @Test
+    @Order(4)
     void givenPassenger_thenSaveIntoDB() throws NotFoundException {
-        var placeCount = placeService.getAll().size();
-        for (long place_id = 1; place_id < placeCount; place_id++) {
-            if(r.nextBoolean()) {
-                var place = placeService.findById(place_id);
-                place.setPassenger(Passenger.builder()
-                        .build());
+        for (var place : placeService.getAll()) {
+            if (r.nextBoolean()) {
+                var passengerGenderID = r.nextInt(0, TestData.genders.length);
+                var passenger = Passenger.builder()
+                        .firstName(randChoice(TestData.uniqueNames[passengerGenderID]))
+                        .secondName(randChoice(TestData.uniqueSurnames[passengerGenderID]))
+                        .gender(TestData.genders[passengerGenderID])
+                        .build();
+                if (r.nextBoolean()) {
+                    passengerService.insertIntoPlace(passenger, place.getId());
+                } else {
+                    passengerService.insertIntoPlace(passenger, place.getId());
+                }
             }
         }
     }

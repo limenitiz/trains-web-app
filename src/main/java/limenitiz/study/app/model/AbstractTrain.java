@@ -5,12 +5,14 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.experimental.SuperBuilder;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.Comparator;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Optional;
 
 @SuperBuilder
 @Getter @Setter
@@ -21,8 +23,12 @@ public abstract class AbstractTrain {
     protected String number;
     protected String arrivalCity;
     protected String departureCity;
+
+    @DateTimeFormat(pattern = "dd-MM-yyyy HH:mm")
     protected LocalDateTime arrivalTime;
+    @DateTimeFormat(pattern = "dd-MM-yyyy HH:mm")
     protected LocalDateTime departureTime;
+
     protected List<Place> places = new LinkedList<>();
     public int availablePlacesCount(PlaceClass placeClass) {
         return places.stream()
@@ -68,11 +74,15 @@ public abstract class AbstractTrain {
     }
 
     public String getArrivalTime() {
-        return DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm").format(arrivalTime);
+        return DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm").format(
+                Optional.ofNullable(arrivalTime)
+                        .orElse(LocalDateTime.now()));
     }
 
     public String getDepartureTime() {
-        return DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm").format(departureTime);
+        return DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm").format(
+                Optional.ofNullable(departureTime)
+                        .orElse(LocalDateTime.now()));
     }
 }
 
