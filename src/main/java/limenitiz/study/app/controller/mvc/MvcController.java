@@ -1,9 +1,7 @@
 package limenitiz.study.app.controller.mvc;
 
 import limenitiz.study.app.model.AbstractTrain;
-import limenitiz.study.app.model.Train;
 import limenitiz.study.app.model.TrainExample;
-import limenitiz.study.app.model.TrainExpress;
 import limenitiz.study.app.service.TrainExpressService;
 import limenitiz.study.app.service.TrainService;
 import org.springframework.stereotype.Controller;
@@ -11,6 +9,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 
 @Controller
@@ -45,12 +45,13 @@ public class MvcController {
         if (trainExample == null) {
             return "schedule";
         }
-        var trains = trainService.findByDto(trainExample.toTrain());
-        var trainsExpress = trainExpressService.findByDto(trainExample.toTrainExpress());
+        var trains = trainService.findByDto(trainExample.toTrain(), TrainExample::compareTrains);
+        var trainsExpress = trainExpressService.findByDto(trainExample.toTrainExpress(), TrainExample::compareTrains);
         var result = new ArrayList<AbstractTrain>();
         result.addAll(trains);
         result.addAll(trainsExpress);
         model.addAttribute("trains", result);
         return "schedule";
     }
+
 }

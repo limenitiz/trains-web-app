@@ -15,17 +15,17 @@
 <div th:fragment="schedule-content" class="w-100">
 
   <svg xmlns="http://www.w3.org/2000/svg" style="display: none;" >
-    <symbol id="svg-train" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#000099" class="bi bi-truck-front" viewBox="0 0 16 16">
+    <symbol id="svg-train" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#0000CC" class="bi bi-truck-front" viewBox="0 0 16 16">
       <path d="M5 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0Zm8 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0Zm-6-1a1 1 0 1 0 0 2h2a1 1 0 1 0 0-2H7ZM4 2a1 1 0 0 0-1 1v3.9c0 .625.562 1.092 1.17.994C5.075 7.747 6.792 7.5 8 7.5c1.208 0 2.925.247 3.83.394A1.008 1.008 0 0 0 13 6.9V3a1 1 0 0 0-1-1H4Zm0 1h8v3.9c0 .002 0 .001 0 0l-.002.004a.013.013 0 0 1-.005.002h-.004C11.088 6.761 9.299 6.5 8 6.5s-3.088.26-3.99.406h-.003a.013.013 0 0 1-.005-.002L4 6.9c0 .001 0 .002 0 0V3Z"></path>
       <path d="M1 2.5A2.5 2.5 0 0 1 3.5 0h9A2.5 2.5 0 0 1 15 2.5v9c0 .818-.393 1.544-1 2v2a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5V14H5v1.5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-2a2.496 2.496 0 0 1-1-2v-9ZM3.5 1A1.5 1.5 0 0 0 2 2.5v9A1.5 1.5 0 0 0 3.5 13h9a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 12.5 1h-9Z"></path>
     </symbol>
-    <symbol id="svg-train-express" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#990000" class="bi bi-truck-front" viewBox="0 0 16 16">
+    <symbol id="svg-train-express" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#CC0000" class="bi bi-truck-front" viewBox="0 0 16 16">
       <path d="M5 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0Zm8 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0Zm-6-1a1 1 0 1 0 0 2h2a1 1 0 1 0 0-2H7ZM4 2a1 1 0 0 0-1 1v3.9c0 .625.562 1.092 1.17.994C5.075 7.747 6.792 7.5 8 7.5c1.208 0 2.925.247 3.83.394A1.008 1.008 0 0 0 13 6.9V3a1 1 0 0 0-1-1H4Zm0 1h8v3.9c0 .002 0 .001 0 0l-.002.004a.013.013 0 0 1-.005.002h-.004C11.088 6.761 9.299 6.5 8 6.5s-3.088.26-3.99.406h-.003a.013.013 0 0 1-.005-.002L4 6.9c0 .001 0 .002 0 0V3Z"></path>
       <path d="M1 2.5A2.5 2.5 0 0 1 3.5 0h9A2.5 2.5 0 0 1 15 2.5v9c0 .818-.393 1.544-1 2v2a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5V14H5v1.5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-2a2.496 2.496 0 0 1-1-2v-9ZM3.5 1A1.5 1.5 0 0 0 2 2.5v9A1.5 1.5 0 0 0 3.5 13h9a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 12.5 1h-9Z"></path>
     </symbol>
   </svg>
 
-  <div class="d-flex flex-column justify-content-center align-items-center">
+  <div class="d-flex flex-column justify-content-between align-items-center">
     <div class="d-flex flex-column list-group list-group-horizontal" th:replace="components/schedule::trains-search"></div>
     <div class="d-flex flex-column list-group list-group-horizontal" th:replace="components/schedule::divider"></div>
     <div class="d-flex flex-column list-group list-group-horizontal" th:replace="components/schedule::trains-list"></div>
@@ -33,127 +33,124 @@
 
 </div>
 
+
 <!--/*@thymesVar id="trainExample" type="limenitiz.study.app.model.TrainExample"*/-->
 <div th:fragment="trains-search">
-  <form class="row"
+  <form class="d-flex justify-content-between align-items-center"
         th:action="@{/schedule}"
         th:object="${trainExample}"
         th:method="post">
-    <div class="col-auto p-1" style="width: 170px; height: 35px">
-      <label for="inputCityFrom" class="visually-hidden">City from</label>
-      <input th:field="*{departureCity}" type="text" class="form-control p-2" id="inputCityFrom" placeholder="City from">
+    <div class="form-floating p-1" style="width: 250px;">
+      <input class="form-control" th:field="*{departureCity}" type="text" id="inputCityFrom" >
+      <label class="" style="" for="inputCityFrom">Departure City</label>
     </div>
-    <div class="col-auto p-1" style="width: 170px; height: 35px">
-      <label for="inputCityTo" class="visually-hidden">City To</label>
-      <input th:field="*{arrivalCity}" type="text" class="form-control p-2" id="inputCityTo" placeholder="City To">
+    <div class="form-floating p-1" style="width: 250px;">
+      <input class="form-control" th:field="*{arrivalCity}" type="text" id="inputCityTo" >
+      <label class="" style="" for="inputCityTo">Arrival City</label>
     </div>
-    <div class="col-auto p-1" style="width: 170px; height: 35px">
-      <label for="inputTimeFrom" class="visually-hidden">Time from</label>
-      <input th:field="*{arrivalTime}" th:type="LocalDateTime" type="datetime-local" class="form-control p-2" id="inputTimeFrom" placeholder="Time from">
+    <div class="form-floating p-1" style="width: 250px;">
+      <input class="form-control" th:field="*{departureTime}" type="datetime-local" id="inputTimeTo">
+      <label class="" for="inputTimeTo">Departure Time</label>
     </div>
-    <div class="col-auto p-1" style="width: 170px; height: 35px">
-      <label for="inputTimeTo" class="visually-hidden">Time To</label>
-      <input th:field="*{departureTime}" th:type="LocalDateTime" type="datetime-local" class="form-control p-2" id="inputTimeTo" placeholder="Time To">
+    <div class="form-floating p-1" style="width: 250px;">
+      <input class="form-control" th:field="*{arrivalTime}" type="datetime-local" id="inputTimeFrom">
+      <label class="" for="inputTimeFrom">Arrival Time</label>
     </div>
-
-    <div class="col-auto p-1" style="width: 170px; height: 35px">
-      <button type="submit" class="btn border border-success bg-success-subtle p-2 mb-3">Search</button>
+    <div class="form-floating p-1">
+      <button type="submit" class="btn border border-success bg-success-subtle">Search</button>
     </div>
   </form>
 </div>
+
 
 <div th:fragment="trains-list">
   <ul class="list-group w-100">
     <!--/*@thymesVar id="train" type="limenitiz.study.app.model.AbstractTrain"*/-->
     <li class="list-group-item" th:each="train: ${trains}">
-      <div th:if="${train.class.name == 'limenitiz.study.app.model.Train'}">
-        <ul th:replace="components/schedule::train-card"></ul>
-      </div>
-      <div th:if="${train.class.name == 'limenitiz.study.app.model.TrainExpress'}">
-        <ul th:replace="components/schedule::train-card"></ul>
-      </div>
+      <ul th:replace="components/schedule::train-card"></ul>
     </li>
   </ul>
 </div>
-
 
 
 <ul th:fragment="train-card" class="list-group">
   <!--/*@thymesVar id="train" type="limenitiz.study.app.model.Train"*/-->
   <li class="list-group-item">
     <div id="main-row" class="row">
-      <div id="train-info" class="col">
-        <div id="train-summary" class="container text-start text-">
-          <span th:text="${train.getNumber()}"></span>
-        </div>
-        <div id="train-info-row" class="row">
-          <div id="train-departure-info" class="col-auto">
-            <ul class="list-group list-group-horizontal">
-              <li class="list-group-item">
-                <span th:text="${train.getDepartureTime()}">Dep. time</span>
-              </li>
-              <li class="list-group-item">
-                <span th:text="${train.getDepartureCity()}">Dep. city</span>
-              </li>
-            </ul>
-          </div>
-          <div id="train-arrival-info" class="col-auto">
-            <ul class="list-group list-group-horizontal">
-              <li class="list-group-item p-sm-1"><span
-                      th:text="${train.getArrivalTime()}">Ariv. time</span></li>
-              <li class="list-group-item p-sm-1"><span
-                      th:text="${train.getArrivalCity()}">Ariv. city</span></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div id="places-info" class="col">
-        <div class="row">
-          <div id="place-reserved_seat-name" class="col-auto">
-            <span>Reserved seat</span>
-          </div>
-          <div id="place-reserved_seat-count" class="col-auto">
-            <span th:text="${train.availablePlacesCount(0) + '/' + train.placesCount(0)}">count</span>
-          </div>
-          <div id="place-reserved_seat-min-price" class="col-auto text-danger">
-            <span th:text="${'from ' + train.minPlacePrice(0)}"></span>
-          </div>
-        </div>
-        <div class="row">
-          <div id="place-compartment-name" class="col-auto">
-            <span>Compartment</span>
-          </div>
-          <div id="place-compartment-count" class="col-auto">
-            <span th:text="${train.availablePlacesCount(1) + '/' + train.placesCount(1)}">count</span>
-          </div>
-          <div id="place-compartment-min-price" class="col-auto text-danger">
-            <!--                    bg-dark-subtle rounded-3-->
-            <span th:text="${'from ' + train.minPlacePrice(1)}">tt</span>
-          </div>
-        </div>
-      </div>
+      <div th:replace="components/schedule::train-info"></div>
+      <div> ➜ </div>
+      <div th:replace="components/schedule::places-info"></div>
     </div>
   </li>
 </ul>
 
 
+<div th:fragment="train-info" id="train-info" class="col-auto border-3 border-end border-light-subtle">
+  <div id="train-summary" class="container text-start text-">
+    <div th:if="${train.class.name == 'limenitiz.study.app.model.Train'}">
+      <span th:replace="components/schedule::train-summary"></span>
+    </div>
+    <div th:if="${train.class.name == 'limenitiz.study.app.model.TrainExpress'}">
+      <span th:replace="components/schedule::train-express-summary"></span>
+    </div>
+  </div>
+  <div id="train-info-row" class="row">
+    <div id="train-departure-info" class="col-auto">
+      <ul class="list-group">
+        <li class="list-group-item p-sm-1">
+          <span th:text="${train.getDepartureTime()}">Dep. time</span>
+        </li>
+        <li class="list-group-item p-sm-1">
+          <span th:text="${train.getDepartureCity()}">Dep. city</span>
+        </li>
+      </ul>
+    </div>
+    <div id="train-arrival-info" class="col-auto">
+      <ul class="list-group">
+        <li class="list-group-item p-sm-1"><span
+                th:text="${train.getArrivalTime()}">Ariv. time</span></li>
+        <li class="list-group-item p-sm-1"><span
+                th:text="${train.getArrivalCity()}">Ariv. city</span></li>
+      </ul>
+    </div>
+  </div>
+</div>
 
 
+<span th:fragment="train-summary" class="icon-link">
+      <svg class="bi" aria-hidden="true"><use xlink:href="#svg-train"></use></svg>
+      <span th:text="${train.getNumber()}"></span></span>
+
+<span th:fragment="train-express-summary" class="icon-link">
+      <svg class="bi" aria-hidden="true"><use xlink:href="#svg-train-express"></use></svg>
+      <span th:text="${train.getNumber()}"></span></span>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+<div th:fragment="places-info" id="places-info" class="col-auto">
+  <div class="row">
+    <div id="place-reserved_seat-name" class="col-auto">
+      <span>Reserved seat</span>
+    </div>
+    <div id="place-reserved_seat-count" class="col-auto">
+      <span th:text="${train.availablePlacesCount(0) + '/' + train.placesCount(0)}">count</span>
+    </div>
+    <div id="place-reserved_seat-min-price" class="col-auto text-danger">
+      <span th:text="${'from ' + train.minPlacePrice(0)}"></span>
+    </div>
+  </div>
+  <div class="row">
+    <div id="place-compartment-name" class="col-auto">
+      <span>Compartment</span>
+    </div>
+    <div id="place-compartment-count" class="col-auto">
+      <span th:text="${train.availablePlacesCount(1) + '/' + train.placesCount(1)}">count</span>
+    </div>
+    <div id="place-compartment-min-price" class="col-auto text-danger">
+      <!--                    bg-dark-subtle rounded-3-->
+      <span th:text="${'from ' + train.minPlacePrice(1)}">tt</span>
+    </div>
+  </div>
+</div>
 
 
 <div th:fragment="divider" class="border rounded-3 m-5" style="height: 4px; width: 75%; background-color: lightgray;"></div>

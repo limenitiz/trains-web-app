@@ -6,7 +6,10 @@ import org.springframework.data.domain.Example;
 import org.springframework.data.repository.query.FluentQuery;
 
 import javax.transaction.Transactional;
+import java.util.Comparator;
 import java.util.List;
+import java.util.function.Function;
+import java.util.function.Predicate;
 
 public abstract class CrudService
         <Repository extends CrudRepository<Entity>,
@@ -50,6 +53,15 @@ public abstract class CrudService
     public List<Dto> findByDto(Dto dto) {
         List<Entity> entities = repository.findBy(Example.of(dto.toEntity()),
                 FluentQuery.FetchableFluentQuery::all);
+
+        return entities.stream()
+                .map(IEntity::toDto)
+                .toList();
+    }
+    public List<Dto> findByDto(Dto dto, IsSimilar<Dto> similar) {
+        List<Entity> entities = repository.findAll().stream()
+                .filter(e -> similar.apply(e.toDto(), dto))
+                .toList();
 
         return entities.stream()
                 .map(IEntity::toDto)
