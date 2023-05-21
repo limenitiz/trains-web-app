@@ -38,9 +38,9 @@
   </ul>
   <div class="tab-content" id="myTabContent">
     <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
-      <div th:replace="components/schedule::trains-tab"></div></div>
+      <div th:replace="components/trains::trains-tab"></div></div>
     <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
-      <div th:replace="components/schedule::trains-express-tab"></div></div>
+      <div th:replace="components/trains::trains-express-tab"></div></div>
   </div>
 
 </div>
@@ -48,28 +48,28 @@
 
 <div th:fragment="trains-tab">
   <table class="table table-striped table-hover table-bordered">
-    <thead th:replace="components/schedule::trains-thead"></thead>
+    <thead th:replace="components/trains::trains-thead"></thead>
     <tbody>
     <!--/*@thymesVar id="train" type="limenitiz.study.app.model.Train"*/-->
       <tr th:each="train: ${trains}">
-        <td th:replace="components/schedule::trains-tbody-tr"></td>
+        <td th:replace="components/trains::trains-tbody-tr"></td>
       </tr>
     </tbody>
-    <tfoot th:replace="components/schedule::trains-tfoot"></tfoot>
+    <tfoot th:replace="components/trains::trains-tfoot"></tfoot>
   </table>
 </div>
 
 
 <div th:fragment="trains-express-tab">
   <table class="table table-striped table-hover table-bordered">
-    <thead th:replace="components/schedule::trains-thead"></thead>
+    <thead th:replace="components/trains::trains-thead"></thead>
     <tbody>
     <!--/*@thymesVar id="train" type="limenitiz.study.app.model.TrainExpress"*/-->
     <tr th:each="train: ${trainsExpress}">
-      <td th:replace="components/schedule::trains-tbody-tr"></td>
+      <td th:replace="components/trains::trains-tbody-tr"></td>
     </tr>
     </tbody>
-    <tfoot th:replace="components/schedule::trains-tfoot"></tfoot>
+    <tfoot th:replace="components/trains::trains-tfoot"></tfoot>
   </table>
 </div>
 
@@ -130,7 +130,7 @@
       <td colspan="8">
         <div class="collapse" th:id="${'trains-collapse' + train.id}">
           <div class="card card-body">
-            <div th:replace="components/schedule::places-content"></div>
+            <div th:replace="components/trains::places-content"></div>
           </div>
         </div>
       </td>
@@ -149,15 +149,15 @@
 
 <div th:fragment="places-content">
   <table class="table table-striped table-hover table-bordered">
-    <thead th:replace="components/schedule::places-thead"></thead>
+    <thead th:replace="components/trains::places-thead"></thead>
     <tbody>
     <!--/*@thymesVar id="train" type="limenitiz.study.app.model.Train"*/-->
     <!--/*@thymesVar id="place" type="limenitiz.study.app.model.Place"*/-->
     <tr th:each="place: ${train.getPlaces()}">
-      <td th:replace="components/schedule::places-tbody-tr"></td>
+      <td th:replace="components/trains::places-tbody-tr"></td>
     </tr>
     </tbody>
-    <tfoot th:replace="components/schedule::places-tfoot"></tfoot>
+    <tfoot th:replace="components/trains::places-tfoot"></tfoot>
   </table>
 </div>
 
@@ -204,7 +204,7 @@
             <div type="button" class="btn badge bg-success"> + </div>
           </div>
           <div th:case="*">
-            <div th:replace="components/schedule::passenger-content"></div>
+            <div th:replace="components/trains::passenger-content"></div>
           </div>
         </div>
       </div>
@@ -224,15 +224,15 @@
 
 <div th:fragment="passenger-content">
   <table class="table table-striped table-hover table-bordered">
-    <thead th:replace="components/schedule::passenger-thead"></thead>
+    <thead th:replace="components/trains::passenger-thead"></thead>
     <tbody>
     <!--/*@thymesVar id="place" type="limenitiz.study.app.model.Place"*/-->
     <!--/*@thymesVar id="passenger" type="limenitiz.study.app.model.Passenger"*/-->
     <tr th:each="passenger: ${place.getPassenger()}">
-      <td th:replace="components/schedule::passenger-tbody-tr"></td>
+      <td th:replace="components/trains::passenger-tbody-tr"></td>
     </tr>
     </tbody>
-    <tfoot th:replace="components/schedule::passenger-tfoot"></tfoot>
+    <tfoot th:replace="components/trains::passenger-tfoot"></tfoot>
   </table>
 </div>
 

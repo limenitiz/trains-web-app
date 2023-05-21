@@ -1,0 +1,111 @@
+<!-- Example use:
+<div th:replace="component/header :: header"></header>
+-->
+
+
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="https://www.thymeleaf.org"
+      lang="ru">
+
+<body>
+
+
+<div th:fragment="places-content" class="w-100">
+
+  <svg xmlns="http://www.w3.org/2000/svg" style="display: none;" >
+    <symbol id="svg-train" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#0000CC" class="bi bi-truck-front" viewBox="0 0 16 16">
+      <path d="M5 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0Zm8 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0Zm-6-1a1 1 0 1 0 0 2h2a1 1 0 1 0 0-2H7ZM4 2a1 1 0 0 0-1 1v3.9c0 .625.562 1.092 1.17.994C5.075 7.747 6.792 7.5 8 7.5c1.208 0 2.925.247 3.83.394A1.008 1.008 0 0 0 13 6.9V3a1 1 0 0 0-1-1H4Zm0 1h8v3.9c0 .002 0 .001 0 0l-.002.004a.013.013 0 0 1-.005.002h-.004C11.088 6.761 9.299 6.5 8 6.5s-3.088.26-3.99.406h-.003a.013.013 0 0 1-.005-.002L4 6.9c0 .001 0 .002 0 0V3Z"></path>
+      <path d="M1 2.5A2.5 2.5 0 0 1 3.5 0h9A2.5 2.5 0 0 1 15 2.5v9c0 .818-.393 1.544-1 2v2a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5V14H5v1.5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-2a2.496 2.496 0 0 1-1-2v-9ZM3.5 1A1.5 1.5 0 0 0 2 2.5v9A1.5 1.5 0 0 0 3.5 13h9a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 12.5 1h-9Z"></path>
+    </symbol>
+    <symbol id="svg-train-express" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#CC0000" class="bi bi-truck-front" viewBox="0 0 16 16">
+      <path d="M5 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0Zm8 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0Zm-6-1a1 1 0 1 0 0 2h2a1 1 0 1 0 0-2H7ZM4 2a1 1 0 0 0-1 1v3.9c0 .625.562 1.092 1.17.994C5.075 7.747 6.792 7.5 8 7.5c1.208 0 2.925.247 3.83.394A1.008 1.008 0 0 0 13 6.9V3a1 1 0 0 0-1-1H4Zm0 1h8v3.9c0 .002 0 .001 0 0l-.002.004a.013.013 0 0 1-.005.002h-.004C11.088 6.761 9.299 6.5 8 6.5s-3.088.26-3.99.406h-.003a.013.013 0 0 1-.005-.002L4 6.9c0 .001 0 .002 0 0V3Z"></path>
+      <path d="M1 2.5A2.5 2.5 0 0 1 3.5 0h9A2.5 2.5 0 0 1 15 2.5v9c0 .818-.393 1.544-1 2v2a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5V14H5v1.5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-2a2.496 2.496 0 0 1-1-2v-9ZM3.5 1A1.5 1.5 0 0 0 2 2.5v9A1.5 1.5 0 0 0 3.5 13h9a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 12.5 1h-9Z"></path>
+    </symbol>
+    <symbol id="svg-arrow" xmlns="http://www.w3.org/2000/svg" stroke-width="1" stroke="#CC0000" width="45" height="10" viewBox="auto">
+      <path d="M 3.6854329109191895 3.8467204570770264 L 42.056278228759766 3.8467204570770264"
+            transform="matrix(1, 0, 0, 1, 0, 0)"></path>
+      <path d="M 37.48333740234375 1.623812198638916 L 42.0562744140625 3.8467202186584473"
+            transform="matrix(1, 0, 0, 1, 0, 0)"></path>
+      <path d="M 37.59562301635742 6.30233097076416 L 42.056270599365234 3.846719741821289"
+            transform="matrix(1, 0, 0, 1, 0, 0)"></path>
+      <path d="M 1.128919243812561 0 C 1.128919243812561 0.6234848821481888 0.6234848821481888 1.128919243812561 0 1.128919243812561 C -0.6234848821481888 1.128919243812561 -1.128919243812561 0.6234848821481888 -1.128919243812561 0 C -1.128919243812561 -0.6234848821481888 -0.6234848821481888 -1.1289192438125608 0 -1.128919243812561 C 0.6234848821481888 -1.128919243812561 1.128919243812561 -0.6234848821481888 1.128919243812561 0 Z"
+            transform="matrix(1, 0, 0, 1, 4.28164, 3.85014)"></path>
+    </symbol>
+    <symbol id="svg-place" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000">
+        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+          <g transform="translate(-420.000000, -7879.000000)" fill="#000000">
+            <g transform="translate(56.000000, 160.000000)">
+              <path d="M384,7729 C384,7729.552 383.552,7730 383,7730 L365,7730 C364.448,7730 364,7729.552 364,7729 C364,7728.448 364.448,7728 365,7728 L383,7728 C383.552,7728 384,7728.448 384,7729 L384,7729 Z M382,7736 C382,7736.552 381.552,7737 381,7737 L367,7737 C366.448,7737 366,7736.552 366,7736 L366,7735 C366,7734.448 366.448,7734 367,7734 L381,7734 C381.552,7734 382,7734.448 382,7735 L382,7736 Z M382,7732 L366,7732 C364.896,7732 364,7732.895 364,7734 L364,7737 C364,7738.105 364.896,7739 366,7739 L382,7739 C383.105,7739 384,7738.105 384,7737 L384,7734 C384,7732.895 383.105,7732 382,7732 L382,7732 Z M382,7723 C382,7723.552 381.552,7724 381,7724 L367,7724 C366.448,7724 366,7723.552 366,7723 L366,7722 C366,7721.448 366.448,7721 367,7721 L381,7721 C381.552,7721 382,7721.448 382,7722 L382,7723 Z M382,7719 L366,7719 C364.896,7719 364,7719.895 364,7721 L364,7724 C364,7725.105 364.896,7726 366,7726 L382,7726 C383.105,7726 384,7725.105 384,7724 L384,7721 C384,7719.895 383.105,7719 382,7719 L382,7719 Z"></path>
+            </g>
+          </g>
+        </g>
+    </symbol>
+  </svg>
+
+  <div class="d-flex flex-column justify-content-between align-items-center">
+    <h3>Train</h3>
+    <div class="d-flex flex-column list-group list-group-horizontal" th:replace="components/trains::train-card"></div>
+    <div th:replace="components/util::divider"></div>
+
+    <h3>Available places</h3>
+    <div class="d-flex flex-column list-group list-group-horizontal" th:replace="components/places::places-available-list"></div>
+    <div th:replace="components/util::divider"></div>
+
+    <h3>Unavailable places</h3>
+    <div class="d-flex flex-column list-group list-group-horizontal" th:replace="components/places::places-unavailable-list"></div>
+  </div>
+
+</div>
+
+
+<div th:fragment="places-available-list" class="d-flex flex-wrap justify-content-center">
+    <!--/*@thymesVar id="place" type="limenitiz.study.app.model.Place"*/-->
+    <div class="card m-2" th:each="place: ${availablePlaces}">
+      <div th:replace="components/places::place-card"></div>
+    </div>
+</div>
+
+
+<div th:fragment="places-unavailable-list" class="d-flex flex-wrap justify-content-center">
+  <!--/*@thymesVar id="place" type="limenitiz.study.app.model.Place"*/-->
+  <div class="card m-2" th:each="place: ${unavailablePlaces}">
+    <div th:replace="components/places::place-card"></div>
+  </div>
+</div>
+
+
+<div th:fragment="place-card" th:replace="components/places::place-desc"></div>
+
+
+<!--/*@thymesVar id="place" type="limenitiz.study.app.model.Place"*/-->
+<!--/*@thymesVar id="train" type="limenitiz.study.app.model.AbstractTrain"*/-->
+<div th:fragment="place-desc" id="place-desc" class="card-body m-1 bg-body-tertiary">
+  <div th:switch="${train.getClassName()}" id="place-summary">
+    <div th:case="Train">
+      <span th:replace="components/places::place-summary"></span>
+    </div>
+    <div th:case="TrainExpress">
+      <span th:replace="components/places::place-express-summary"></span>
+    </div>
+  </div>
+  <div class="row">
+    <div class="" th:text="${place.getPriceStr()}"></div>
+  </div>
+</div>
+
+
+<span th:fragment="place-summary" class="icon-link">
+      <svg class="bi" aria-hidden="true"><use xlink:href="#svg-place"></use></svg>
+      <span th:text="${place.getNumber()}"></span></span>
+
+<span th:fragment="place-express-summary" class="icon-link">
+      <svg class="bi" aria-hidden="true"><use xlink:href="#svg-place"></use></svg>
+      <span th:text="${place.getNumber()}"></span></span>
+
+
+<div th:fragment="divider" class="border rounded-3 m-5" style="height: 4px; width: 75%; background-color: lightgray;"></div>
+
+
+</body>
+</html>

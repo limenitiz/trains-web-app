@@ -171,7 +171,7 @@ public class AllTests {
     @Order(3)
     void givenPlace_thenSaveIntoDB() throws NotFoundException {
         for (var train : trainService.getAll()) {
-            for (int place_id = 1; place_id < 38 * r.nextInt(6); place_id++) {
+            for (int place_id = 1; place_id < (38 * r.nextInt(1,6)); place_id++) {
                 var placeClass = randChoice(TestData.classes);
                 var priceCoefficient = switch (placeClass) {
                     case Compartment -> 1;
@@ -191,7 +191,7 @@ public class AllTests {
         }
 
         for (var train : trainExpressService.getAll()) {
-            for (int place_id = 1; place_id < 38 * r.nextInt(3); place_id++) {
+            for (int place_id = 1; place_id < (38 * r.nextInt(1,6)); place_id++) {
                 var placeClass = randChoice(TestData.classes);
                 var priceCoefficient = switch (placeClass) {
                     case Compartment -> 1;

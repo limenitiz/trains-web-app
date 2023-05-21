@@ -41,6 +41,10 @@ public class Place implements IDto<PlaceEntity> {
                         .orElse(""));
     }
 
+    public boolean isAvailable() {
+        return passenger == null;
+    }
+
     @Override
     public PlaceEntity toEntity() {
         PassengerEntity passengerEntity = null;

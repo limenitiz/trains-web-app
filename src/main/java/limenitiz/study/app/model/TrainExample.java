@@ -99,13 +99,13 @@ public class TrainExample extends AbstractTrain {
             arrivalCity = o1.getArrivalCity().equals(o2.getArrivalCity());
         }
         if (o1.getDepartureTime() != null && o2.getDepartureTime() != null) {
-            departureTime = LocalDateTime.parse(o1.getDepartureTime(), DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm")).isAfter(
-                    LocalDateTime.parse(o2.getDepartureTime(), DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm"))
+            departureTime = LocalDateTime.parse(o2.getDepartureTime(), DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm")).isBefore(
+                    LocalDateTime.parse(o1.getDepartureTime(), DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm"))
             );
         }
         if (o1.getArrivalTime() != null && o2.getArrivalTime() != null) {
-            arrivalTime = LocalDateTime.parse(o1.getArrivalTime(), DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm")).isBefore(
-                    LocalDateTime.parse(o2.getArrivalTime(), DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm"))
+            arrivalTime = LocalDateTime.parse(o2.getArrivalTime(), DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm")).isAfter(
+                    LocalDateTime.parse(o1.getArrivalTime(), DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm"))
             );
         }
 

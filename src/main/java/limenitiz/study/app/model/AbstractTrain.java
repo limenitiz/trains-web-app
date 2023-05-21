@@ -30,6 +30,14 @@ public abstract class AbstractTrain {
     protected LocalDateTime departureTime;
 
     protected List<Place> places = new LinkedList<>();
+
+    public List<Place> places(PlaceClass placeClass) {
+        return places.stream()
+                .filter(p -> {
+                    if (placeClass == null) { return true; }
+                    return p.getPlaceClass().equals(placeClass);
+                }).toList();
+    }
     public int availablePlacesCount(PlaceClass placeClass) {
         return places.stream()
                 .filter(p -> {
@@ -83,6 +91,11 @@ public abstract class AbstractTrain {
         return DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm").format(
                 Optional.ofNullable(departureTime)
                         .orElse(LocalDateTime.now()));
+    }
+
+    public String getClassName() {
+        var s = this.getClass().getName();
+        return s.substring(s.lastIndexOf('.') + 1);
     }
 }
 
