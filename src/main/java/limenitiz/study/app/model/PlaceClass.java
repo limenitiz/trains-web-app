@@ -15,4 +15,13 @@ public enum PlaceClass {
     public String getVal() {
         return val;
     }
+
+    public String getValWithoutSpaces() {
+        return val.replaceAll(" ", "");
+    }
+
+    @Override
+    public String toString() {
+        return getVal();
+    }
 }

@@ -47,22 +47,25 @@
     <h3>Train</h3>
     <div class="d-flex flex-column list-group list-group-horizontal" th:replace="components/trains::train-card"></div>
     <div th:replace="components/util::divider"></div>
-
-    <h3>Available places</h3>
+    <!--/*@thymesVar id="place" type="limenitiz.study.app.model.Place"*/-->
+    <h3>Available <span th:text="${placeClass}"></span> places
+      <a class="btn p-0 ps-1 pe-1 border rounded border-success bg-success-subtle" th:href="@{/places/{place_class}/{train_class}/{train_id}(train_id=${train.getId()}, train_class=${train.getClassName()}, place_class=${placeClass.getValWithoutSpaces()}, sort-type='number')}"> Sort by number </a>
+      <a class="btn p-0 ps-1 pe-1 border rounded border-success bg-success-subtle" th:href="@{/places/{place_class}/{train_class}/{train_id}(train_id=${train.getId()}, train_class=${train.getClassName()}, place_class=${placeClass.getValWithoutSpaces()}, sort-type='price')}"> Sort by price </a>
+    </h3>
     <div class="d-flex flex-column list-group list-group-horizontal" th:replace="components/places::places-available-list"></div>
     <div th:replace="components/util::divider"></div>
-
-    <h3>Unavailable places</h3>
+    <h3>Unavailable <span th:text="${placeClass}"></span> places</h3>
     <div class="d-flex flex-column list-group list-group-horizontal" th:replace="components/places::places-unavailable-list"></div>
+    <div th:replace="components/places::buy-place-status"></div>
   </div>
-
 </div>
 
 
 <div th:fragment="places-available-list" class="d-flex flex-wrap justify-content-center">
     <!--/*@thymesVar id="place" type="limenitiz.study.app.model.Place"*/-->
     <div class="card m-2" th:each="place: ${availablePlaces}">
-      <div th:replace="components/places::place-card"></div>
+      <div th:replace="components/places::place-card-available"></div>
+      <div th:replace="components/places::modal-buy-place"></div>
     </div>
 </div>
 
@@ -70,12 +73,15 @@
 <div th:fragment="places-unavailable-list" class="d-flex flex-wrap justify-content-center">
   <!--/*@thymesVar id="place" type="limenitiz.study.app.model.Place"*/-->
   <div class="card m-2" th:each="place: ${unavailablePlaces}">
-    <div th:replace="components/places::place-card"></div>
+    <div th:replace="components/places::place-card-unavailable"></div>
   </div>
 </div>
 
+<a th:fragment="place-card-available" type="button" class="btn p-0 " data-bs-toggle="modal" th:attr="data-bs-target=${'#modalBuyPlace-' + place.getNumber()}">
+  <div th:replace="components/places::place-desc"></div>
+</a>
 
-<div th:fragment="place-card" th:replace="components/places::place-desc"></div>
+<div th:fragment="place-card-unavailable" th:replace="components/places::place-desc"></div>
 
 
 <!--/*@thymesVar id="place" type="limenitiz.study.app.model.Place"*/-->
@@ -104,7 +110,81 @@
       <span th:text="${place.getNumber()}"></span></span>
 
 
-<div th:fragment="divider" class="border rounded-3 m-5" style="height: 4px; width: 75%; background-color: lightgray;"></div>
+<!--th:action="@{/places/buy/{id}(id=${place.getId()})}"-->
+
+<!--/*@thymesVar id="place" type="limenitiz.study.app.model.Place"*/-->
+<!--/*@thymesVar id="passenger" type="limenitiz.study.app.model.Passenger"*/-->
+<div th:fragment="modal-buy-place" class="modal fade" th:id="${'modalBuyPlace-' + place.getNumber()}" tabindex="-1" aria-labelledby="modalBuyPlaceLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <form class="modal-content"
+          th:action="@{/places/{place_id}/{place_class}/{train_class}/{train_id}(train_id=${train.getId()}, train_class=${train.getClassName()}, place_class=${placeClass.getValWithoutSpaces()}, place_id=${place.getId()})}"
+          th:object="${passenger}"
+          th:method="post">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="modalBuyPlaceLabel">Buy place #<span th:text="${place.getNumber()}"></span></h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="form-floating p-1" style="width: 250px;">
+          <input class="form-control" th:field="*{firstName}" type="text" id="inputFirstName">
+          <label class="" style="" for="inputFirstName">First Name</label>
+        </div>
+        <div class="form-floating p-1" style="width: 250px;">
+          <input class="form-control" th:field="*{secondName}" type="text" id="inputSecondName" >
+          <label class="" style="" for="inputSecondName">Second Name</label>
+        </div>
+        <select th:field="*{gender}" class="form-select p-1 m-1 ps-3 text-secondary" style="width: 240px" aria-label="Gender">
+          <option th:value="Male">Male</option>
+          <option th:value="Female">Female</option>
+        </select>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="submit" class="btn btn-success">Buy</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+
+<div th:fragment="buy-place-status" th:if="${buyPlaceStatus != null}">
+  <div class="toast-container position-fixed bottom-0 end-0 p-3">
+    <div th:switch="${buyPlaceStatus}" id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true" data-bs-autohide="false">
+      <div th:case="success">
+        <div class="toast-header">
+          <svg height="16px" viewBox="0 0 24 24" fill="lightgreen" xmlns="http://www.w3.org/2000/svg">
+            <path id="Vector" d="M3 6.2002V17.8002C3 18.9203 3 19.4796 3.21799 19.9074C3.40973 20.2837 3.71547 20.5905 4.0918 20.7822C4.5192 21 5.07899 21 6.19691 21H17.8031C18.921 21 19.48 21 19.9074 20.7822C20.2837 20.5905 20.5905 20.2837 20.7822 19.9074C21 19.48 21 18.921 21 17.8031V6.19691C21 5.07899 21 4.5192 20.7822 4.0918C20.5905 3.71547 20.2837 3.40973 19.9074 3.21799C19.4796 3 18.9203 3 17.8002 3H6.2002C5.08009 3 4.51962 3 4.0918 3.21799C3.71547 3.40973 3.40973 3.71547 3.21799 4.0918C3 4.51962 3 5.08009 3 6.2002Z"
+                  stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+          </svg>
+          <strong class="me-auto">Operation status</strong>
+          <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+        <div class="toast-body">
+          Operation success.
+        </div>
+      </div>
+      <div th:case="error">
+        <div class="toast-header">
+          <svg height="16px" viewBox="0 0 24 24" fill="lightcoral" xmlns="http://www.w3.org/2000/svg">
+            <path id="Vector" d="M3 6.2002V17.8002C3 18.9203 3 19.4796 3.21799 19.9074C3.40973 20.2837 3.71547 20.5905 4.0918 20.7822C4.5192 21 5.07899 21 6.19691 21H17.8031C18.921 21 19.48 21 19.9074 20.7822C20.2837 20.5905 20.5905 20.2837 20.7822 19.9074C21 19.48 21 18.921 21 17.8031V6.19691C21 5.07899 21 4.5192 20.7822 4.0918C20.5905 3.71547 20.2837 3.40973 19.9074 3.21799C19.4796 3 18.9203 3 17.8002 3H6.2002C5.08009 3 4.51962 3 4.0918 3.21799C3.71547 3.40973 3.40973 3.71547 3.21799 4.0918C3 4.51962 3 5.08009 3 6.2002Z"
+                  stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+          </svg>
+          <strong class="me-auto">Operation status</strong>
+          <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+        <div class="toast-body">
+          Operation failed. <span th:text="${buyPlaceError}"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+      const toastLiveExample = document.getElementById('liveToast')
+      const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample)
+      toastBootstrap.show()
+    </script>
+</div>
 
 
 </body>

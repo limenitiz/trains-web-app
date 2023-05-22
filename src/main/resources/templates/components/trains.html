@@ -137,25 +137,25 @@
 <div th:fragment="places-info" id="places-info" class="col-auto">
   <div class="row">
     <div class="col-auto m-2">
-      <span class="row mb-3">Reserved seat</span>
       <span class="row mb-3">Compartment</span>
+      <span class="row mb-3">Reserved seat</span>
     </div>
     <div class="col-auto m-2">
-      <span class="row mb-3" th:text="${train.availablePlacesCount(0) + '/' + train.placesCount(0)}">count</span>
       <span class="row mb-3" th:text="${train.availablePlacesCount(1) + '/' + train.placesCount(1)}">count</span>
+      <span class="row mb-3" th:text="${train.availablePlacesCount(0) + '/' + train.placesCount(0)}">count</span>
     </div>
     <div class="col-auto m-2 text-danger">
-      <span class="row mb-3" th:text="${'from ' + train.minPlacePrice(0)}"></span>
       <span class="row mb-3" th:text="${'from ' + train.minPlacePrice(1)}"></span>
+      <span class="row mb-3" th:text="${'from ' + train.minPlacePrice(0)}"></span>
     </div>
     <div class="col-auto m-2">
-      <span class="row mb-3">
-        <!--/*@thymesVar id="train" type="limenitiz.study.app.model.AbstractTrain"*/-->
-        <a th:href="@{/places/ReservedSeat/{train_class}/{train_id}(train_id=${train.getId()}, train_class=${train.getClassName()})}" role="button" class="btn p-0 border rounded border-success bg-success-subtle ps-1 pe-1"> Buy </a>
-      </span>
       <span class="row mb-3">
         <!--/*@thymesVar id="train" type="limenitiz.study.app.model.AbstractTrain"*/-->
         <a th:href="@{/places/Compartment/{train_class}/{train_id}(train_id=${train.getId()}, train_class=${train.getClassName()})}" role="button" class="btn p-0 border rounded border-success bg-success-subtle ps-1 pe-1"> Buy </a>
+      </span>
+      <span class="row mb-3">
+        <!--/*@thymesVar id="train" type="limenitiz.study.app.model.AbstractTrain"*/-->
+        <a th:href="@{/places/ReservedSeat/{train_class}/{train_id}(train_id=${train.getId()}, train_class=${train.getClassName()})}" role="button" class="btn p-0 border rounded border-success bg-success-subtle ps-1 pe-1"> Buy </a>
       </span>
     </div>
   </div>

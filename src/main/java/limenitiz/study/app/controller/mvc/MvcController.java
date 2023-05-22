@@ -1,9 +1,7 @@
 package limenitiz.study.app.controller.mvc;
 
-import limenitiz.study.app.model.AbstractTrain;
-import limenitiz.study.app.model.Place;
-import limenitiz.study.app.model.PlaceClass;
-import limenitiz.study.app.model.TrainExample;
+import limenitiz.study.app.model.*;
+import limenitiz.study.app.service.PassengerService;
 import limenitiz.study.app.service.PlaceService;
 import limenitiz.study.app.service.TrainExpressService;
 import limenitiz.study.app.service.TrainService;
@@ -13,6 +11,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.ArrayList;
 import java.util.Comparator;
@@ -22,11 +21,17 @@ import java.util.List;
 public class MvcController {
     private final TrainService trainService;
     private final TrainExpressService trainExpressService;
+    private final PassengerService passengerService;
+    private final PlaceService placeService;
 
     public MvcController(TrainService trainService,
-                         TrainExpressService trainExpressService) {
+                         TrainExpressService trainExpressService,
+                         PassengerService passengerService,
+                         PlaceService placeService) {
         this.trainService = trainService;
         this.trainExpressService = trainExpressService;
+        this.passengerService = passengerService;
+        this.placeService = placeService;
     }
 
     @GetMapping("/")
@@ -60,22 +65,23 @@ public class MvcController {
         return "trains";
     }
 
-    @GetMapping("/places/{placeClass}/{trainClass}/{trainID}")
+    @GetMapping("/places/{place-class}/{train-class}/{train-id}")
     public String places(Model model,
-                         @PathVariable Long trainID,
-                         @PathVariable PlaceClass placeClass,
-                         @PathVariable String trainClass) {
+                         @PathVariable(required=true,  name = "train-id") Long trainId,
+                         @PathVariable(required=true,  name = "place-class") PlaceClass placeClass,
+                         @PathVariable(required=true,  name = "train-class") String trainClass,
+                         @RequestParam(required=false, name = "sort-type") String sortType) {
         AbstractTrain train = null;
 
         switch (trainClass) {
             case "Train" -> {
                 try {
-                    train = trainService.findById(trainID);
+                    train = trainService.findById(trainId);
                 } catch (NotFoundException ignored) { }
             }
             case "TrainExpress" -> {
                 try {
-                    train = trainExpressService.findById(trainID);
+                    train = trainExpressService.findById(trainId);
                 } catch (NotFoundException ignored) { }
             }
         }
@@ -86,19 +92,88 @@ public class MvcController {
         }
 
         model.addAttribute("train", train);
+        model.addAttribute("passenger", new Passenger());
+        model.addAttribute("placeClass", placeClass);
 
-        model.addAttribute("availablePlaces",
-                train.places(placeClass).stream()
-                        .filter(Place::isAvailable)
-                        .sorted(Comparator.comparing(Place::getNumber))
-                        .toList()
-        );
-        model.addAttribute("unavailablePlaces",
-                train.places(placeClass).stream()
-                        .filter(place -> !place.isAvailable())
-                        .sorted(Comparator.comparing(Place::getNumber))
-                        .toList()
-        );
+
+        if ("price".equals(sortType)) {
+            model.addAttribute("availablePlaces",
+                    train.places(placeClass).stream()
+                            .filter(Place::isAvailable)
+                            .sorted(Comparator.comparing(Place::getPrice))
+                            .toList()
+            );
+            model.addAttribute("unavailablePlaces",
+                    train.places(placeClass).stream()
+                            .filter(place -> !place.isAvailable())
+                            .sorted(Comparator.comparing(Place::getPrice))
+                            .toList()
+            );
+        }
+        else if ("number".equals(sortType)) {
+            model.addAttribute("availablePlaces",
+                    train.places(placeClass).stream()
+                            .filter(Place::isAvailable)
+                            .sorted(Comparator.comparing(Place::getNumber))
+                            .toList()
+            );
+            model.addAttribute("unavailablePlaces",
+                    train.places(placeClass).stream()
+                            .filter(place -> !place.isAvailable())
+                            .sorted(Comparator.comparing(Place::getNumber))
+                            .toList()
+            );
+        }
+        else {
+            model.addAttribute("availablePlaces",
+                    train.places(placeClass).stream()
+                            .filter(Place::isAvailable)
+                            .sorted(Comparator.comparing(Place::getNumber))
+                            .toList()
+            );
+            model.addAttribute("unavailablePlaces",
+                    train.places(placeClass).stream()
+                            .filter(place -> !place.isAvailable())
+                            .sorted(Comparator.comparing(Place::getNumber))
+                            .toList()
+            );
+        }
+
+
         return "places";
+    }
+
+    @PostMapping("/places/{place-id}/{place-class}/{train-class}/{train-id}")
+    public String buyPlace(Model model,
+                           Passenger passenger,
+                           @PathVariable(required=true,  name = "train-id") Long trainId,
+                           @PathVariable(required=true,  name = "place-class") PlaceClass placeClass,
+                           @PathVariable(required=true,  name = "train-class") String trainClass,
+                           @RequestParam(required=false, name = "sort-type") String sortType,
+                           @PathVariable(name = "place-id") Long placeId) {
+
+        try {
+            var place = placeService.findById(placeId);
+            if (place.getPassenger() != null) {
+                throw new Exception("Place is taken");
+            }
+
+            List<Passenger> existPassengerList = passengerService.findByDto(passenger, Passenger::isEquals);
+            Passenger existPassenger = null;
+            if (existPassengerList.size() > 0) {
+                existPassenger = existPassengerList.get(0);
+            }
+            if (existPassenger != null) {
+                passengerService.linkWithPlace(existPassenger.getId(), placeId);
+            } else {
+                passengerService.insertIntoPlace(passenger, placeId);
+            }
+
+            model.addAttribute("buyPlaceStatus", "success");
+        } catch (Exception e) {
+            model.addAttribute("buyPlaceStatus", "error");
+            model.addAttribute("buyPlaceError", e.getMessage());
+        }
+        return places(model, trainId, placeClass, trainClass, sortType);
     }
 }
