@@ -35,13 +35,13 @@ public class MvcController {
     }
 
     @GetMapping("/")
-    public String root() {
-        return home();
+    public String root(Model model) {
+        return home(model);
     }
 
     @GetMapping("/home")
-    public String home() {
-        return "home";
+    public String home(Model model) {
+        return schedule(model);
     }
 
     @GetMapping("/trains")
